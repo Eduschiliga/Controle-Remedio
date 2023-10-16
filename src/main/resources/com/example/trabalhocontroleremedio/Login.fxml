@@ -18,7 +18,7 @@
          <children>
             <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="295.0" style="-fx-background-color: #04BF8A;" text="ENTRAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="Poppins Bold" size="16.0" />
                </font>
                <effect>
                   <DropShadow>
@@ -35,9 +35,9 @@
    <center>
       <VBox alignment="CENTER_LEFT" prefHeight="160.0" prefWidth="563.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="26.0" prefWidth="42.0" text="Login" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="26.0" prefWidth="46.0" text="Login" textAlignment="CENTER">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Poppins Medium" size="16.0" />
                </font>
                <VBox.margin>
                   <Insets left="100.0" />
@@ -51,9 +51,9 @@
                   <Insets bottom="12.0" left="100.0" right="100.0" />
                </VBox.margin>
             </TextField>
-            <Label alignment="CENTER" prefHeight="26.0" prefWidth="45.0" text="Senha" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="26.0" prefWidth="51.0" text="Senha" textAlignment="CENTER">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Poppins Medium" size="16.0" />
                </font>
                <VBox.margin>
                   <Insets left="100.0" />
@@ -71,16 +71,16 @@
       </VBox>
    </center>
    <top>
-      <VBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0" stylesheets="@Style.css" BorderPane.alignment="CENTER">
          <children>
             <Label prefHeight="34.0" prefWidth="76.0" text="Entrar">
                <font>
-                  <Font name="System Bold" size="23.0" />
+                  <Font name="Poppins Bold" size="23.0" />
                </font>
             </Label>
-            <Label prefHeight="34.0" prefWidth="236.0" text="Olá, vamos começar!">
+            <Label prefHeight="34.0" prefWidth="252.0" text="Olá, vamos começar!">
                <font>
-                  <Font name="System Bold" size="23.0" />
+                  <Font name="Poppins Light" size="23.0" />
                </font>
             </Label>
          </children>
