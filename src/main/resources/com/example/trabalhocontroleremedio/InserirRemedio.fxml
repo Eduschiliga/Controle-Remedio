@@ -45,9 +45,21 @@
                <VBox.margin>
                   <Insets />
                </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
             </Label>
-            <TextField />
-            <Label text="Horários" />
+            <TextField promptText="Nome do remédio">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets right="10.0" />
+               </VBox.margin></TextField>
+            <Label text="Horários">
+               <padding>
+                  <Insets bottom="5.0" top="10.0" />
+               </padding></Label>
             <GridPane>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
@@ -112,15 +124,24 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
                </children>
             </GridPane>
-            <Button mnemonicParsing="false" text="Inserir" />
+            <Button mnemonicParsing="false" text="Inserir">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
          </children>
       </VBox>
    </center>
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
-            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Adicionar Imagem" />
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></ImageView>
+            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Adicionar Imagem">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin></Button>
          </children>
       </VBox>
    </left>
