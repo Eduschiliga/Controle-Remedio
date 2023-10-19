@@ -16,8 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -46,9 +45,21 @@
                <VBox.margin>
                   <Insets />
                </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
             </Label>
-            <TextField />
-            <Label text="Horários" />
+            <TextField promptText="Nome do remédio">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets right="10.0" />
+               </VBox.margin></TextField>
+            <Label text="Horários">
+               <padding>
+                  <Insets bottom="5.0" top="10.0" />
+               </padding></Label>
             <GridPane>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
@@ -113,14 +124,24 @@
                   <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
                </children>
             </GridPane>
+            <Button mnemonicParsing="false" text="Inserir">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
          </children>
       </VBox>
    </center>
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
-            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Adicionar Imagem" />
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></ImageView>
+            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Adicionar Imagem">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin></Button>
          </children>
       </VBox>
    </left>

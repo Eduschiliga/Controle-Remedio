@@ -43,7 +43,7 @@
                   <Insets left="100.0" />
                </VBox.margin>
             </Label>
-            <TextField prefHeight="34.0" prefWidth="50.0" style="-fx-pref-width: 100;">
+            <TextField prefHeight="34.0" prefWidth="50.0" promptText="Nome de usuário" style="-fx-pref-width: 100;">
                <padding>
                   <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                </padding>
@@ -59,7 +59,7 @@
                   <Insets left="100.0" />
                </VBox.margin>
             </Label>
-            <PasswordField prefHeight="26.0" prefWidth="80.0">
+            <PasswordField prefHeight="26.0" prefWidth="80.0" promptText="Senha">
                <padding>
                   <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                </padding>
@@ -73,7 +73,7 @@
    <top>
       <VBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0" stylesheets="@Style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="34.0" prefWidth="76.0" text="Entrar">
+            <Label id="entrar" prefHeight="34.0" prefWidth="76.0" stylesheets="@Style.css" text="Entrar">
                <font>
                   <Font name="Poppins Bold" size="23.0" />
                </font>
