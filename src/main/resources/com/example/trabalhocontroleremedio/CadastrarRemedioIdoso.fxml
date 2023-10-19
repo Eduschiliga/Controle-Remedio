@@ -18,7 +18,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.HelloApplication">
    <top>
       <HBox alignment="CENTER" prefHeight="70.0" prefWidth="800.0" BorderPane.alignment="CENTER">
@@ -35,9 +34,9 @@
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Nome Idoso" />
-            <TextField />
+            <TextField promptText="Nome do idoso" />
             <Label text="Nome Remédio" />
-            <TextField />
+            <TextField promptText="Nome do remédio" />
             <Label text="Dosagem" />
             <SplitMenuButton mnemonicParsing="false" prefHeight="26.0" prefWidth="250.0">
               <items>
@@ -46,7 +45,7 @@
               </items>
             </SplitMenuButton>
             <Label text="Quantidade de Dias" />
-            <DatePicker prefWidth="250.0" />
+            <DatePicker prefWidth="250.0" promptText="Quantidade de dias" />
             <Label text="Quantidade de vezes por dia" />
             <Spinner prefWidth="250.0">
                <VBox.margin>

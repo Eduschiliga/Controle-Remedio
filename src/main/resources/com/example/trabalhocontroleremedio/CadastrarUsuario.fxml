@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.HelloApplication">
+<AnchorPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.HelloApplication">
    <children>
       <BorderPane prefHeight="578.0" prefWidth="800.0">
          <top>
@@ -37,7 +37,7 @@
                         <Insets />
                      </VBox.margin>
                   </Label>
-                  <TextField prefHeight="30.0" prefWidth="517.0" />
+                  <TextField prefHeight="30.0" prefWidth="517.0" promptText="Login de usuário" />
                   <Label prefHeight="27.0" prefWidth="63.0" stylesheets="@Style.css" text="Senha">
                      <font>
                         <Font size="18.0" />
@@ -46,7 +46,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <PasswordField prefHeight="30.0" />
+                  <PasswordField prefHeight="30.0" promptText="Login do usuário" />
                   <Label prefHeight="27.0" prefWidth="145.0" stylesheets="@Style.css" text="Tipo de usuário">
                      <font>
                         <Font size="18.0" />
@@ -64,7 +64,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField prefHeight="30.0" prefWidth="517.0" />
+                  <TextField prefHeight="30.0" prefWidth="517.0" promptText="Nome do usuário" />
                   <Label prefHeight="27.0" prefWidth="81.0" stylesheets="@Style.css" text="Telefone">
                      <font>
                         <Font size="18.0" />
@@ -73,7 +73,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField prefHeight="30.0" prefWidth="517.0" />
+                  <TextField prefHeight="30.0" prefWidth="517.0" promptText="Telefone do usuário" />
                   <Label prefHeight="27.0" prefWidth="96.0" stylesheets="@Style.css" text="Matrícula">
                      <font>
                         <Font size="18.0" />
@@ -82,7 +82,7 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField prefHeight="30.0" prefWidth="517.0" />
+                  <TextField prefHeight="30.0" prefWidth="517.0" promptText="Matrícula do usuário" />
                </children>
             </VBox>
          </center>
@@ -119,7 +119,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="ESCLUIR">
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
