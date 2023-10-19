@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -45,6 +45,9 @@
                <font>
                   <Font name="Poppins Bold" size="12.0" />
                </font>
+               <VBox.margin>
+                  <Insets left="27.0" top="10.0" />
+               </VBox.margin>
             </Button>
          </children>
       </VBox>
@@ -52,13 +55,22 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Nome" />
-            <TextField promptText="Nome do idoso" />
+            <Label text="Nome">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin></Label>
+            <TextField promptText="Nome do idoso">
+               <VBox.margin>
+                  <Insets right="10.0" />
+               </VBox.margin></TextField>
             <HBox prefHeight="55.0" prefWidth="450.0">
                <children>
                   <VBox prefHeight="45.0" prefWidth="168.0">
                      <children>
-                        <Label text="Data de Nascimento" />
+                        <Label text="Data de Nascimento">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin></Label>
                         <DatePicker prefHeight="26.0" prefWidth="184.0" promptText="Data de nascimento" />
                      </children>
                   </VBox>
@@ -68,6 +80,9 @@
                            <padding>
                               <Insets left="5.0" />
                            </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
                         </Label>
                         <ChoiceBox prefWidth="150.0" />
                      </children>
@@ -82,6 +97,19 @@
                <padding>
                   <Insets top="10.0" />
                </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" text="Cadastrar" />
+                  <Button mnemonicParsing="false" text="Alterar">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
             </HBox>
          </children>
       </VBox>
