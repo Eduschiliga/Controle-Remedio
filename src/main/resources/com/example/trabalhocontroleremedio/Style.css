@@ -13,6 +13,6 @@
     src: url('../../../fontes/Poppins/Poppins-Medium.ttf');
 }
 
-.root {
-    -fx-font-family: 'Poppins';
+#entrar {
+    -fx-font-family: 'Poppins Bold';
 }

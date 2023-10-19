@@ -73,7 +73,7 @@
    <top>
       <VBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0" stylesheets="@Style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="34.0" prefWidth="76.0" text="Entrar">
+            <Label id="entrar" prefHeight="34.0" prefWidth="76.0" stylesheets="@Style.css" text="Entrar">
                <font>
                   <Font name="Poppins Bold" size="23.0" />
                </font>
