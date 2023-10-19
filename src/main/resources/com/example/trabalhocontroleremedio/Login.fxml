@@ -78,7 +78,7 @@
                   <Font name="Poppins Bold" size="23.0" />
                </font>
             </Label>
-            <Label prefHeight="34.0" prefWidth="247.0" text="Olá, vamos começar!">
+            <Label prefHeight="34.0" prefWidth="249.0" text="Olá, vamos começar!">
                <font>
                   <Font name="Poppins Light" size="23.0" />
                </font>
