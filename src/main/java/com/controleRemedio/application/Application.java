@@ -1,4 +1,4 @@
-package com.example.trabalhocontroleremedio;
+package com.controleRemedio.application;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

@@ -3,6 +3,6 @@ module com.example.trabalhocontroleremedio {
     requires javafx.fxml;
 
 
-    opens com.example.trabalhocontroleremedio to javafx.fxml;
-    exports com.example.trabalhocontroleremedio;
+    opens com.controleRemedio.application to javafx.fxml;
+    exports com.controleRemedio.application;
 }
