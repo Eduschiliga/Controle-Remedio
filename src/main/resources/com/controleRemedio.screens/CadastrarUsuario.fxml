@@ -12,19 +12,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controleRemedio.application.Application">
+<AnchorPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controleRemedio.application.CadastrarUsuarioController">
    <children>
       <BorderPane prefHeight="578.0" prefWidth="800.0">
          <top>
-            <VBox alignment="CENTER" prefHeight="51.0" prefWidth="800.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Label id="cadastro" prefHeight="35.0" prefWidth="226.0" stylesheets="@Style.css" text="Cadastro de Usuários" textAlignment="CENTER">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </VBox>
+            <VBox alignment="CENTER" prefHeight="51.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
          </top>
          <center>
             <VBox prefHeight="426.0" prefWidth="600.0" BorderPane.alignment="CENTER">
@@ -95,9 +87,9 @@
          <bottom>
             <HBox alignment="CENTER" prefHeight="119.0" prefWidth="800.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR">
+                  <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font size="18.0" />
                      </font>
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -105,7 +97,7 @@
                   </Button>
                   <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="ALTERAR">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font size="18.0" />
                      </font>
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -113,7 +105,7 @@
                   </Button>
                   <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="BUSCAR">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font size="18.0" />
                      </font>
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -121,7 +113,7 @@
                   </Button>
                   <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR">
                      <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font size="18.0" />
                      </font>
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

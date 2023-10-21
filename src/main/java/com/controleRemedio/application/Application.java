@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class Application extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("CadastrarRemedioIdoso.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Controle de Remédios");
         stage.setScene(scene);
