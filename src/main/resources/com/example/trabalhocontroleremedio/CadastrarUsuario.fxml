@@ -92,7 +92,7 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="119.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR">
+            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR">
                <font>
                   <Font size="18.0" />
                </font>
@@ -108,7 +108,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="buscar" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="BUSCAR">
+            <Button fx:id="buscar" alignment="CENTER" mnemonicParsing="false" onAction="#imprimir" prefHeight="50.0" prefWidth="150.0" text="BUSCAR">
                <font>
                   <Font size="18.0" />
                </font>

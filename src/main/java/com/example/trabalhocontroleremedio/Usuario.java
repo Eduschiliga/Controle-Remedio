@@ -16,4 +16,9 @@ public class Usuario {
         this.telefone = telefone;
         this.matricula = matricula;
     }
+
+    public String toString(){
+        return "Usuário:\nLogin: " + this.login + "\nSenha: " + this.senha + "\nTipo: " + this.tipo + "\nNome: " + this.nome +
+                "\nTelefone: " + this.telefone + "\nMatricula: " + this.matricula;
+    }
 }

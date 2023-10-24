@@ -2,6 +2,7 @@ package com.example.trabalhocontroleremedio;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -9,6 +10,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class CadastrarUsuarioController {
+
+    private Usuario user;
 
     @FXML
     private ResourceBundle resources;
@@ -45,6 +48,16 @@ public class CadastrarUsuarioController {
 
     @FXML
     private ComboBox<?> usuario;
+
+    @FXML
+    void inserir(ActionEvent event) {
+        user = new Usuario(login.getText(), senha.getText(), 0, nome.getText(), telefone.getText(), 0);
+    }
+
+    @FXML
+    void imprimir(ActionEvent event) {
+        System.out.println(user.toString());
+    }
 
     @FXML
     void initialize() {
