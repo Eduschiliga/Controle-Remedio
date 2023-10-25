@@ -51,12 +51,19 @@ public class CadastrarUsuarioController {
 
     @FXML
     void inserir(ActionEvent event) {
-        user = new Usuario(login.getText(), senha.getText(), 0, nome.getText(), telefone.getText(), 0);
+        int matricula = 0;
+        try {
+            matricula = Integer.parseInt(this.matricula.getText());
+        } catch (NumberFormatException NFE) {
+            System.out.println("Necessário ser uma string apenas de números");
+        }
+            
+        user.adicionarUsuario(login.getText(), senha.getText(), 0, nome.getText(), telefone.getText(), matricula);
     }
 
     @FXML
     void imprimir(ActionEvent event) {
-        System.out.println(user.toString());
+        System.out.println(user.imprimirUsuario());
     }
 
     @FXML
