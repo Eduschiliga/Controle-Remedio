@@ -2,10 +2,12 @@ package com.example.trabalhocontroleremedio;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -47,10 +49,12 @@ public class CadastrarUsuarioController {
     private TextField telefone;
 
     @FXML
-    private ComboBox<?> usuario;
+    private ChoiceBox<?> tipo;
+    //tipo = new ChoiceBox(FXCollections.observableArrayList("Usuário","Admnistrador"));
 
     @FXML
     void inserir(ActionEvent event) {
+        user = new Usuario();
         int matricula = 0;
         try {
             matricula = Integer.parseInt(this.matricula.getText());
@@ -77,7 +81,7 @@ public class CadastrarUsuarioController {
         assert nome != null : "fx:id=\"nome\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
         assert senha != null : "fx:id=\"senha\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
         assert telefone != null : "fx:id=\"telefone\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert usuario != null : "fx:id=\"usuario\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
+        assert tipo != null : "fx:id=\"tipo\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
 
     }
 
