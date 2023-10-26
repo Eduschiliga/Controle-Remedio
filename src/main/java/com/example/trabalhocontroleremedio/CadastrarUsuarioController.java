@@ -3,17 +3,19 @@ package com.example.trabalhocontroleremedio;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.collections.ObservableList;
+import javafx.collections.FXCollections;
 
 public class CadastrarUsuarioController {
 
     private Usuario user;
+    private ObservableList<String> listaTipo;
 
     @FXML
     private ResourceBundle resources;
@@ -49,30 +51,55 @@ public class CadastrarUsuarioController {
     private TextField telefone;
 
     @FXML
-    private ChoiceBox<?> tipo;
-    //tipo = new ChoiceBox(FXCollections.observableArrayList("Usuário","Admnistrador"));
+    private ChoiceBox<String> tipo;
 
     @FXML
-    void inserir(ActionEvent event) {
-        user = new Usuario();
+    void cadastrar(ActionEvent event) {
+        this.user = new Usuario();
         int matricula = 0;
         try {
             matricula = Integer.parseInt(this.matricula.getText());
         } catch (NumberFormatException NFE) {
-            System.out.println("Necessário ser uma string apenas de números");
+            System.out.println("A mátricula deve conter apenas números");
         }
-            
-        user.adicionarUsuario(login.getText(), senha.getText(), 0, nome.getText(), telefone.getText(), matricula);
+
+        this.user.adicionarUsuario(this.login.getText(), this.senha.getText(), this.tipo.getValue(), this.nome.getText(), this.telefone.getText(), matricula);
     }
 
     @FXML
-    void imprimir(ActionEvent event) {
-        System.out.println(user.imprimirUsuario());
+    void buscar(ActionEvent event) {
+        this.login.setText(this.user.getLogin());
+        this.tipo.setValue(this.user.getTipo());
+        this.nome.setText(this.user.getNome());
+        this.telefone.setText(this.user.getTelefone());
+        this.matricula.setText(Integer.toString(this.user.getMatricula()));
+    }
+
+    @FXML
+    void alterar(ActionEvent event) {
+        int matricula = 0;
+        try {
+            matricula = Integer.parseInt(this.matricula.getText());
+        } catch (NumberFormatException NFE) {
+            System.out.println("A mátricula deve conter apenas números");
+        }
+
+        this.user.alterarUsuario(this.login.getText(), this.senha.getText(), this.tipo.getValue(), this.nome.getText(), this.telefone.getText(), matricula);
+    }
+
+    @FXML
+    void excluir(ActionEvent event) {
+        this.user.excluirUsuario();
+        this.login.setText(null);
+        this.tipo.setValue("Administrador");
+        this.nome.setText(null);
+        this.telefone.setText(null);
+        this.matricula.setText(null);
     }
 
     @FXML
     void initialize() {
-        assert alterar != null : "fx:id=\"alterar\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
+        /*assert alterar != null : "fx:id=\"alterar\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
         assert buscar != null : "fx:id=\"buscar\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
         assert cadastrar != null : "fx:id=\"cadastrar\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
         assert excluir != null : "fx:id=\"excluir\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
@@ -81,8 +108,10 @@ public class CadastrarUsuarioController {
         assert nome != null : "fx:id=\"nome\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
         assert senha != null : "fx:id=\"senha\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
         assert telefone != null : "fx:id=\"telefone\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert tipo != null : "fx:id=\"tipo\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-
+        assert tipo != null : "fx:id=\"tipo\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";*/
+        listaTipo = FXCollections.observableArrayList("Usuário","Administrador");
+        tipo.setItems(listaTipo);
+        tipo.setValue("Usuário");
     }
 
 }

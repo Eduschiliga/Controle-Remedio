@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarUsuarioController">
+<BorderPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarUsuarioController">
    <top>
       <VBox alignment="CENTER" prefHeight="51.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
@@ -92,7 +92,7 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="119.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR">
+            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR">
                <font>
                   <Font size="18.0" />
                </font>
@@ -100,7 +100,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="alterar" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="ALTERAR">
+            <Button fx:id="alterar" alignment="CENTER" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" text="ALTERAR">
                <font>
                   <Font size="18.0" />
                </font>
@@ -108,7 +108,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="buscar" alignment="CENTER" mnemonicParsing="false" onAction="#imprimir" prefHeight="50.0" prefWidth="150.0" text="BUSCAR">
+            <Button fx:id="buscar" alignment="CENTER" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" text="BUSCAR">
                <font>
                   <Font size="18.0" />
                </font>
@@ -116,7 +116,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="excluir" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR">
+            <Button fx:id="excluir" alignment="CENTER" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR">
                <font>
                   <Font size="18.0" />
                </font>
