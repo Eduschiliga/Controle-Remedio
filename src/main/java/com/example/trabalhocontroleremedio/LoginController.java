@@ -7,12 +7,6 @@ import javafx.fxml.FXML;
 public class LoginController {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     void initialize() {
 
     }

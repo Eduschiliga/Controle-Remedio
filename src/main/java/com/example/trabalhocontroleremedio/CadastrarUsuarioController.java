@@ -18,24 +18,6 @@ public class CadastrarUsuarioController {
     private ObservableList<String> listaTipo;
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
-    private Button alterar;
-
-    @FXML
-    private Button buscar;
-
-    @FXML
-    private Button cadastrar;
-
-    @FXML
-    private Button excluir;
-
-    @FXML
     private TextField login;
 
     @FXML
@@ -52,6 +34,14 @@ public class CadastrarUsuarioController {
 
     @FXML
     private ChoiceBox<String> tipo;
+    @FXML
+    private Button btnCadastrar;
+    @FXML
+    private Button btnAlterar;
+    @FXML
+    private Button buscar;
+    @FXML
+    private Button excluir;
 
     @FXML
     void cadastrar(ActionEvent event) {
@@ -109,7 +99,7 @@ public class CadastrarUsuarioController {
         assert senha != null : "fx:id=\"senha\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
         assert telefone != null : "fx:id=\"telefone\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
         assert tipo != null : "fx:id=\"tipo\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";*/
-        listaTipo = FXCollections.observableArrayList("Usuário","Administrador");
+        listaTipo = FXCollections.observableArrayList("Usuário", "Administrador");
         tipo.setItems(listaTipo);
         tipo.setValue("Usuário");
     }

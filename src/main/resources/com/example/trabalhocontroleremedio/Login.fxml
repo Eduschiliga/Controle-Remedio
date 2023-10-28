@@ -14,9 +14,24 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.LoginController">
    <bottom>
-      <HBox alignment="CENTER" prefHeight="136.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="129.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="295.0" style="-fx-background-color: #04BF8A;" text="ENTRAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #04BF8A;" text="ENTRAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Poppins Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.3738601803779602" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" style="-fx-background-color: #9b9b9b;" text="CADASTRAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Poppins Bold" size="16.0" />
                </font>
@@ -67,6 +82,7 @@
                   <Insets bottom="12.0" left="100.0" right="100.0" />
                </VBox.margin>
             </PasswordField>
+            <VBox prefHeight="200.0" prefWidth="100.0" />
          </children>
       </VBox>
    </center>
