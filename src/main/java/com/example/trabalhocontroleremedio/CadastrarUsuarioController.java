@@ -1,8 +1,5 @@
 package com.example.trabalhocontroleremedio;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -34,14 +31,18 @@ public class CadastrarUsuarioController {
 
     @FXML
     private ChoiceBox<String> tipo;
+
     @FXML
     private Button btnCadastrar;
+
     @FXML
     private Button btnAlterar;
+
     @FXML
-    private Button buscar;
+    private Button btnBuscar;
+
     @FXML
-    private Button excluir;
+    private Button btnExcluir;
 
     @FXML
     void cadastrar(ActionEvent event) {
@@ -81,7 +82,7 @@ public class CadastrarUsuarioController {
     void excluir(ActionEvent event) {
         this.user.excluirUsuario();
         this.login.setText(null);
-        this.tipo.setValue("Administrador");
+        this.tipo.setValue("Usuário");
         this.nome.setText(null);
         this.telefone.setText(null);
         this.matricula.setText(null);

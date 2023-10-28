@@ -23,7 +23,7 @@
                   <Insets bottom="5.0" top="5.0" />
                </padding>
             </Label>
-            <TextField promptText="Nome do remédio">
+            <TextField fx:id="nome" promptText="Nome do remédio">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -35,7 +35,7 @@
                   <Insets bottom="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField promptText="Nome genérico do remédio">
+            <TextField fx:id="nomeGenerico" promptText="Nome genérico do remédio">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin>
@@ -45,7 +45,7 @@
                   <Insets bottom="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField promptText="Categoria do remédio">
+            <TextField fx:id="categoria" promptText="Categoria do remédio">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin>
@@ -55,7 +55,7 @@
                   <Insets bottom="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField promptText="Dosagem do remédio">
+            <TextField fx:id="dosagem" promptText="Dosagem do remédio">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin>
@@ -65,15 +65,15 @@
                   <Insets bottom="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField promptText="Forma de dosagem do remédio">
+            <TextField fx:id="formaDosagem" promptText="Forma de dosagem do remédio">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin>
             </TextField>
             <HBox alignment="CENTER_LEFT" prefHeight="132.0" prefWidth="600.0">
                <children>
-                  <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Adicionar Imagem" />
-                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btnAdicionarImagem" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#adicionarImagem" text="Adicionar Imagem" />
+                  <ImageView fx:id="image" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </HBox>
          </children>
@@ -82,12 +82,12 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="81.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR" textAlignment="CENTER">
+            <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR" textAlignment="CENTER">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="ALTERAR" textAlignment="CENTER">
+            <Button fx:id="btnAlterar" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" text="ALTERAR" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -95,7 +95,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="BUSCAR" textAlignment="CENTER">
+            <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" text="BUSCAR" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -103,7 +103,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR" textAlignment="CENTER">
+            <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
