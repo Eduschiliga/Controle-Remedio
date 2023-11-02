@@ -4,13 +4,13 @@ public class Login {
     private String login;
     private String senha;
 
-    private Login(){
-        this.login = "Marcos";
-        this.senha = "Potato";
+    public Login(){
+        this.login = "admin";
+        this.senha = "admin";
     }
 
     public boolean buscar(String login, String senha){
-        if(this.login == login && this.senha == senha){
+        if(this.login.equals(login) && this.senha.equals(senha)){
             return true;
         }
         return false;

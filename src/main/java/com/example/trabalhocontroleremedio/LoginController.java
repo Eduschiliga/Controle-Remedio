@@ -4,10 +4,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 
 public class LoginController {
     private Login usuario;
@@ -30,9 +30,12 @@ public class LoginController {
     @FXML
     void entrar(ActionEvent event) {
         boolean validacao;
+        usuario = new Login();
         validacao = usuario.buscar(login.getText(),senha.getText());
         if(validacao){
-            
+            HelloApplication.trocarTela("Principal");
+        }else{
+            System.out.println("Usuário ou senha errados");
         }
     }
 

@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
 
@@ -89,17 +91,14 @@ public class CadastrarUsuarioController {
     }
 
     @FXML
+    void telaPrincipal(KeyEvent event) {
+        if(event.getCode() == KeyCode.ESCAPE){
+            HelloApplication.trocarTela("Principal");
+        }
+    }
+
+    @FXML
     void initialize() {
-        /*assert alterar != null : "fx:id=\"alterar\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert buscar != null : "fx:id=\"buscar\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert cadastrar != null : "fx:id=\"cadastrar\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert excluir != null : "fx:id=\"excluir\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert login != null : "fx:id=\"login\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert matricula != null : "fx:id=\"matricula\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert nome != null : "fx:id=\"nome\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert senha != null : "fx:id=\"senha\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert telefone != null : "fx:id=\"telefone\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";
-        assert tipo != null : "fx:id=\"tipo\" was not injected: check your FXML file 'CadastrarUsuario.fxml'.";*/
         listaTipo = FXCollections.observableArrayList("Usuário", "Administrador");
         tipo.setItems(listaTipo);
         tipo.setValue("Usuário");

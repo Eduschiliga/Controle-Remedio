@@ -12,11 +12,9 @@ public class HelloApplication extends Application {
 
     private static Scene principal;
     private static Scene login;
-    private static Scene cadastrarRemedio;
-    private static Scene cadastrarUsuario;
-    private static Scene cadastrarRemedioIdoso;
 
     public void start(Stage primaryStage) throws IOException {
+        stage = primaryStage;
         primaryStage.setTitle("Controle de Remédios");
 
         Parent fxmlLogin = FXMLLoader.load(getClass().getResource("Login.fxml"));
@@ -25,17 +23,20 @@ public class HelloApplication extends Application {
         Parent fxmlPrincipal = FXMLLoader.load(getClass().getResource("Principal.fxml"));
         principal = new Scene(fxmlPrincipal);
 
-        /*Parent fxmlCadastrarRemedio = FXMLLoader.load(getClass().getResource("CadastrarRemedio.fxml"));
-        cadastrarRemedio = new Scene(fxmlCadastrarRemedio);
-
-        Parent fxmlCadastrarUsuario = FXMLLoader.load(getClass().getResource("CadastrarUsuario.fxml"));
-        cadastrarUsuario = new Scene(fxmlCadastrarUsuario);
-
-        Parent fxmlCadastrarRemedioIdoso = FXMLLoader.load(getClass().getResource("CadastrarRemdioIdoso.fxml"));
-        cadastrarRemedioIdoso = new Scene(fxmlCadastrarRemedioIdoso);*/
-
-        primaryStage.setScene(principal);
+        primaryStage.setScene(login);
         primaryStage.show();
+    }
+
+    public static void trocarTela(String tela){
+        switch (tela) {
+            case "Principal":
+                stage.setScene(principal);
+                break;
+        
+            case "Login":
+                stage.setScene(login);
+                break;
+        }
     }
 
     public static void main(String[] args) {
