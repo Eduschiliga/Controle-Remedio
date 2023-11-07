@@ -31,7 +31,7 @@ public class Remedio {
         this.formaDosagem = null;
     }
 
-    public void adicionarRemedio(String nome, String nomeGenerico, String categoria, int dosagem, String formaDosagem){
+    public void adicionarRemedio(String nome, String nomeGenerico, String categoria, int dosagem, String formaDosagem){ // Adiciona o remédio para o banco
         this.nome = nome;
         this.nomeGenerico = nomeGenerico;
         this.categoria = categoria;
@@ -39,7 +39,7 @@ public class Remedio {
         this.formaDosagem = formaDosagem;
     }
 
-    public void alterarRemedio(String nome, String nomeGenerico, String categoria, int dosagem, String formaDosagem){
+    public void alterarRemedio(String nome, String nomeGenerico, String categoria, int dosagem, String formaDosagem){ // Altera o reméido no banco
         this.nome = nome;
         this.nomeGenerico = nomeGenerico;
         this.categoria = categoria;
@@ -47,7 +47,7 @@ public class Remedio {
         this.formaDosagem = formaDosagem;
     }
 
-    public void excluirRemedio(){
+    public void excluirRemedio(){ // Exclui o remédio do banco
         this.nome = null;
         this.nomeGenerico = null;
         this.categoria = null;

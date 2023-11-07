@@ -47,7 +47,7 @@ public class CadastrarUsuarioController {
     private Button btnExcluir;
 
     @FXML
-    void cadastrar(ActionEvent event) {
+    void cadastrar(ActionEvent event) { // Cadastra usuário no banco
         this.user = new Usuario();
         int matricula = 0;
         try {
@@ -60,7 +60,7 @@ public class CadastrarUsuarioController {
     }
 
     @FXML
-    void buscar(ActionEvent event) {
+    void buscar(ActionEvent event) { // Busca usuário no banco
         this.login.setText(this.user.getLogin());
         this.tipo.setValue(this.user.getTipo());
         this.nome.setText(this.user.getNome());
@@ -69,7 +69,7 @@ public class CadastrarUsuarioController {
     }
 
     @FXML
-    void alterar(ActionEvent event) {
+    void alterar(ActionEvent event) { // Altera usuário no banco
         int matricula = 0;
         try {
             matricula = Integer.parseInt(this.matricula.getText());
@@ -81,20 +81,13 @@ public class CadastrarUsuarioController {
     }
 
     @FXML
-    void excluir(ActionEvent event) {
+    void excluir(ActionEvent event) { // Exclui um usuário no banco
         this.user.excluirUsuario();
         this.login.setText(null);
         this.tipo.setValue("Usuário");
         this.nome.setText(null);
         this.telefone.setText(null);
         this.matricula.setText(null);
-    }
-
-    @FXML
-    void telaPrincipal(KeyEvent event) {
-        if(event.getCode() == KeyCode.ESCAPE){
-            HelloApplication.trocarTela("Principal");
-        }
     }
 
     @FXML

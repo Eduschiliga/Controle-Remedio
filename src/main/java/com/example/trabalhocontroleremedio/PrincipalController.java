@@ -2,10 +2,10 @@ package com.example.trabalhocontroleremedio;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
+import javafx.scene.input.KeyEvent;
 
 public class PrincipalController {
 
@@ -16,55 +16,53 @@ public class PrincipalController {
     private URL location;
 
     @FXML
-    private Button cadastrarIdoso;
+    private Tab cadastrarIdoso;
 
     @FXML
-    private Button cadastrarIdosoRemedio;
+    private Tab cadastrarRemedio;
 
     @FXML
-    private Button cadastrarRemedio;
+    private Tab cadastrarRemedioIdoso;
 
     @FXML
-    private Button cadastrarUsuario;
+    private Tab cadastrarUsuario;
 
     @FXML
-    private Button login;
+    private Tab visualizarIdoso;
 
     @FXML
-    private BorderPane panel;
+    private TabPane principal;
 
     @FXML
-    void cadastrarIdoso(ActionEvent event) {
-        HelloApplication.trocarTela("Idoso");
-    }
+    void trocarPainel(KeyEvent event) { // Troca de abas de acordo com a tecla clicada
+        switch (event.getCode()) {
+            case F1:
+                principal.getSelectionModel().select(visualizarIdoso);
+                break;
+            
+            case F2:
+                principal.getSelectionModel().select(cadastrarUsuario);
+                break;
+            
+            case F3:
+                principal.getSelectionModel().select(cadastrarIdoso);
+                break;
 
-    @FXML
-    void cadastrarIdosoRemedio(ActionEvent event) {
-        HelloApplication.trocarTela("RemedioIdoso");
-    }
+            case F4:
+                principal.getSelectionModel().select(cadastrarRemedio);
+                break;
 
-    @FXML
-    void cadastrarRemedio(ActionEvent event) {
-        HelloApplication.trocarTela("Remedio");
-    }
+            case F5:
+                principal.getSelectionModel().select(cadastrarRemedioIdoso);
+                break;
 
-    @FXML
-    void cadastrarUsuario(ActionEvent event) {
-        HelloApplication.trocarTela("Usuario");
-    }
-
-    @FXML
-    void login(ActionEvent event) {
-        HelloApplication.trocarTela("Login");
+            default:
+                break;
+        }
     }
 
     @FXML
     void initialize() {
-        assert cadastrarIdoso != null : "fx:id=\"cadastrarIdoso\" was not injected: check your FXML file 'Principal.fxml'.";
-        assert cadastrarIdosoRemedio != null : "fx:id=\"cadastrarIdosoRemedio\" was not injected: check your FXML file 'Principal.fxml'.";
-        assert cadastrarRemedio != null : "fx:id=\"cadastrarRemedio\" was not injected: check your FXML file 'Principal.fxml'.";
-        assert cadastrarUsuario != null : "fx:id=\"cadastrarUsuario\" was not injected: check your FXML file 'Principal.fxml'.";
-        assert login != null : "fx:id=\"login\" was not injected: check your FXML file 'Principal.fxml'.";
 
     }
 

@@ -41,7 +41,7 @@ public class Usuario {
         this.matricula = 0;
     }
 
-    public void adicionarUsuario(String login, String senha, String tipo, String nome, String telefone, int matricula){
+    public void adicionarUsuario(String login, String senha, String tipo, String nome, String telefone, int matricula){ // Adiciona usuário ao banco
         this.login = login;
         this.senha = senha;
         this.tipo = tipo;
@@ -50,7 +50,7 @@ public class Usuario {
         this.matricula = matricula;
     }
 
-    public void alterarUsuario(String login, String senha, String tipo, String nome, String telefone, int matricula){
+    public void alterarUsuario(String login, String senha, String tipo, String nome, String telefone, int matricula){ // Altera o usuário no banco
         this.login = login;
         this.senha = senha;
         this.tipo = tipo;
@@ -59,7 +59,7 @@ public class Usuario {
         this.matricula = matricula;
     }
 
-    public void excluirUsuario(){
+    public void excluirUsuario(){ // Exclui usuário do banco
         this.login = null;
         this.senha = null;
         this.tipo = null;

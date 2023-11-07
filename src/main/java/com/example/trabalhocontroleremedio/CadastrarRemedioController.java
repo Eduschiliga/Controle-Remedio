@@ -57,7 +57,7 @@ public class CadastrarRemedioController {
     }
 
     @FXML
-    void alterar(ActionEvent event) {
+    void alterar(ActionEvent event) { // Faz a alteração dos dados do remédio no banco
         int dosagem = 0;
         try {
             dosagem = Integer.parseInt(this.dosagem.getText());
@@ -69,7 +69,7 @@ public class CadastrarRemedioController {
     }
 
     @FXML
-    void buscar(ActionEvent event) {
+    void buscar(ActionEvent event) { // Busca um remédio no banco
         this.nome.setText(this.remedio.getNome());
         this.nomeGenerico.setText(this.remedio.getNomeGenerico());
         this.categoria.setText(this.remedio.getCategoria());
@@ -78,7 +78,7 @@ public class CadastrarRemedioController {
     }
 
     @FXML
-    void cadastrar(ActionEvent event) {
+    void cadastrar(ActionEvent event) { // Cadastra o remédio no banco
         this.remedio = new Remedio();
 
         int dosagem = 0;
@@ -92,7 +92,7 @@ public class CadastrarRemedioController {
     }
 
     @FXML
-    void excluir(ActionEvent event) {
+    void excluir(ActionEvent event) { // Exclui um remédio do banco
         this.remedio.excluirRemedio();
        this.nome.setText(null);
         this.nomeGenerico.setText(null);
@@ -103,17 +103,6 @@ public class CadastrarRemedioController {
 
     @FXML
     void initialize() {
-        assert btnAdicionarImagem != null : "fx:id=\"btnAdicionarImagem\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert btnAlterar != null : "fx:id=\"btnAlterar\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert btnBuscar != null : "fx:id=\"btnBuscar\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert btnCadastrar != null : "fx:id=\"btnCadastrar\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert btnExcluir != null : "fx:id=\"btnExcluir\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert categoria != null : "fx:id=\"categoria\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert dosagem != null : "fx:id=\"dosagem\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert formaDosagem != null : "fx:id=\"formaDosagem\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert image != null : "fx:id=\"image\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert nome != null : "fx:id=\"nome\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
-        assert nomeGenerico != null : "fx:id=\"nomeGenerico\" was not injected: check your FXML file 'CadastrarRemedio.fxml'.";
 
     }
 

@@ -27,7 +27,7 @@ public class HelloApplication extends Application {
         primaryStage.show();
     }
 
-    public static void trocarTela(String tela){
+    public static void trocarTela(String tela){ // Realiza a troca de tela de acordo com a informada no controller
         switch (tela) {
             case "Principal":
                 stage.setScene(principal);

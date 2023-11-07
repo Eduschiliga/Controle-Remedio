@@ -35,21 +35,21 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 
-<TabPane prefHeight="578.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane fx:id="principal" onKeyPressed="#trocarPainel" prefHeight="578.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.PrincipalController">
    <tabs>
-      <Tab closable="false" text="Cadastrar Usuário">
-        <fx:include source="CadastrarUsuario.fxml"/>
+      <Tab fx:id="visualizarIdoso" closable="false" text="Visualizar Idoso">
       </Tab>
-      <Tab closable="false" text="Cadastrar Idoso">
-        <fx:include source="CadastrarIdoso.fxml"/>
+      <Tab fx:id="cadastrarUsuario" closable="false" text="Cadastrar Usuário">
+        <fx:include source="CadastrarUsuario.fxml" />
       </Tab>
-      <Tab closable="false" text="Cadastrar Remedio">
-        <fx:include source="CadastrarRemedio.fxml"/>
+      <Tab fx:id="cadastrarIdoso" closable="false" text="Cadastrar Idoso">
+        <fx:include source="CadastrarIdoso.fxml" />
       </Tab>
-      <Tab closable="false" text="Cadastrar Remedio Idoso">
-        <fx:include source="CadastrarRemedioIdoso.fxml"/>
+      <Tab fx:id="cadastrarRemedio" closable="false" text="Cadastrar Remedio">
+        <fx:include source="CadastrarRemedio.fxml" />
       </Tab>
-      <Tab closable="false" text="Visualizar Idoso">
+      <Tab fx:id="cadastrarRemedioIdoso" closable="false" text="Cadastrar Remedio Idoso">
+        <fx:include source="CadastrarRemedioIdoso.fxml" />
       </Tab>
    </tabs>
 </TabPane>
