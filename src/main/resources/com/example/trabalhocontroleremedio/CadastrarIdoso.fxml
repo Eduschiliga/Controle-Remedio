@@ -23,7 +23,7 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <TextField prefHeight="40.0" prefWidth="426.0" promptText="Nome do idoso">
+            <TextField fx:id="nome" prefHeight="40.0" prefWidth="426.0" promptText="Nome do idoso">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin></TextField>
@@ -37,7 +37,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <DatePicker prefHeight="40.0" prefWidth="200.0" promptText="Data de nascimento" />
+                  <DatePicker fx:id="nascimento" prefHeight="40.0" prefWidth="200.0" promptText="Data de nascimento" />
                </children>
             </VBox>
             <Label text="Sexo">
@@ -51,14 +51,14 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <ComboBox prefHeight="40.0" prefWidth="200.0" promptText="Sexo" visibleRowCount="2" />
+            <ComboBox fx:id="sexo" prefHeight="40.0" prefWidth="200.0" promptText="Sexo" visibleRowCount="2" />
          </children>
       </VBox>
    </center>
    <bottom>
       <HBox alignment="CENTER" prefHeight="175.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR" textAlignment="CENTER">
+            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR" textAlignment="CENTER">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
@@ -66,7 +66,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="ALTERAR" textAlignment="CENTER">
+            <Button fx:id="alterar" alignment="CENTER" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" text="ALTERAR" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="BUSCAR" textAlignment="CENTER">
+            <Button fx:id="buscar" alignment="CENTER" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" text="BUSCAR" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -82,7 +82,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR" textAlignment="CENTER">
+            <Button fx:id="excluir" alignment="CENTER" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<DIAGRAMA ID="1" TIPO="tpConceitual" UniversalUnicID="5DE4-F2-B814-AB-794C-74-8E">
+<DIAGRAMA ID="1" TIPO="tpConceitual" UniversalUnicID="7532-4F-B7C7-43-CC1A-4-47">
     <InfoDiagrama ID="1">
         <Versao Valor="3.2.0"/>
         <Autores/>
@@ -663,15 +663,15 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="56" PontaB="43"/>
         <Pontos>
-            <Ponto Left="296" Top="62"/>
+            <Ponto Left="297" Top="62"/>
             <Ponto Left="285" Top="62"/>
             <Ponto Left="285" Top="152"/>
         </Pontos>
     </Ligacao>
     <Atributo ID="73">
-        <Bounds Height="14" Left="317" Top="95" Width="69"/>
+        <Bounds Height="14" Left="317" Top="95" Width="63"/>
         <DisablePainted Valor="false"/>
-        <Texto>horarios</Texto>
+        <Texto>horario</Texto>
         <Observacao/>
         <Dicionario/>
         <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
@@ -734,9 +734,9 @@
         <Ligacoes PontaA="75" PontaB="73"/>
         <Pontos>
             <Ponto Left="394" Top="89"/>
-            <Ponto Left="389" Top="89"/>
-            <Ponto Left="389" Top="99"/>
-            <Ponto Left="384" Top="99"/>
+            <Ponto Left="386" Top="89"/>
+            <Ponto Left="386" Top="99"/>
+            <Ponto Left="378" Top="99"/>
         </Pontos>
     </Ligacao>
     <Atributo ID="77">
@@ -770,9 +770,9 @@
         <Ligacoes PontaA="77" PontaB="73"/>
         <Pontos>
             <Ponto Left="394" Top="107"/>
-            <Ponto Left="389" Top="107"/>
-            <Ponto Left="389" Top="99"/>
-            <Ponto Left="384" Top="99"/>
+            <Ponto Left="386" Top="107"/>
+            <Ponto Left="386" Top="99"/>
+            <Ponto Left="378" Top="99"/>
         </Pontos>
     </Ligacao>
     <Ligacao ID="87">
@@ -793,7 +793,7 @@
             <Ponto Left="259" Top="196"/>
         </Pontos>
         <Cardinalidade ID="88">
-            <Bounds Height="14" Left="148" Top="176" Width="35"/>
+            <Bounds Height="14" Left="107" Top="179" Width="35"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_1</Texto>
             <Observacao/>
@@ -802,7 +802,7 @@
             <Ancorado Valor="false"/>
             <TamanhoAutmatico Valor="true"/>
             <Card Valor="2"/>
-            <MovimentacaoManual Valor="true"/>
+            <MovimentacaoManual Valor="false"/>
             <Papel Valor=""/>
         </Cardinalidade>
     </Ligacao>
@@ -824,7 +824,7 @@
             <Ponto Left="543" Top="172"/>
         </Pontos>
         <Cardinalidade ID="91">
-            <Bounds Height="14" Left="548" Top="180" Width="35"/>
+            <Bounds Height="14" Left="510" Top="182" Width="35"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_2</Texto>
             <Observacao/>
@@ -833,7 +833,7 @@
             <Ancorado Valor="false"/>
             <TamanhoAutmatico Valor="true"/>
             <Card Valor="2"/>
-            <MovimentacaoManual Valor="true"/>
+            <MovimentacaoManual Valor="false"/>
             <Papel Valor=""/>
         </Cardinalidade>
     </Ligacao>
