@@ -19,9 +19,6 @@ public class CadastrarRemedioController {
     private URL location;
 
     @FXML
-    private Button btnAdicionarImagem;
-
-    @FXML
     private Button btnAlterar;
 
     @FXML
@@ -43,18 +40,10 @@ public class CadastrarRemedioController {
     private TextField formaDosagem;
 
     @FXML
-    private ImageView image;
-
-    @FXML
     private TextField nome;
 
     @FXML
     private TextField nomeGenerico;
-
-    @FXML
-    void adicionarImagem(ActionEvent event) {
-
-    }
 
     @FXML
     void alterar(ActionEvent event) { // Faz a alteração dos dados do remédio no banco
