@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarRemedioController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarRemedioController">
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Nome">
+            <Label styleClass="label-modern" text="Nome">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -21,49 +21,49 @@
                   <Insets bottom="5.0" top="5.0" />
                </padding>
             </Label>
-            <TextField fx:id="nome" promptText="Nome do remédio">
+            <TextField fx:id="nome" promptText="Nome do remédio" styleClass="text-field-modern">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin></TextField>
-            <Label text="Nome Genérico">
+            <Label styleClass="label-modern" text="Nome Genérico">
                <VBox.margin>
                   <Insets bottom="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="nomeGenerico" promptText="Nome genérico do remédio">
+            <TextField fx:id="nomeGenerico" promptText="Nome genérico do remédio" styleClass="text-field-modern">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin>
             </TextField>
-            <Label text="Categoria">
+            <Label styleClass="label-modern" text="Categoria">
                <VBox.margin>
                   <Insets bottom="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="categoria" promptText="Categoria do remédio">
+            <TextField fx:id="categoria" promptText="Categoria do remédio" styleClass="text-field-modern">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin>
             </TextField>
-            <Label text="Dosagem">
+            <Label styleClass="label-modern" text="Dosagem">
                <VBox.margin>
                   <Insets bottom="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="dosagem" promptText="Dosagem do remédio">
+            <TextField fx:id="dosagem" promptText="Dosagem do remédio" styleClass="text-field-modern">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin>
             </TextField>
-            <Label text="Forma de Dosagem">
+            <Label styleClass="label-modern" text="Forma de Dosagem">
                <VBox.margin>
                   <Insets bottom="5.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="formaDosagem" promptText="Forma de dosagem do remédio">
+            <TextField fx:id="formaDosagem" promptText="Forma de dosagem do remédio" styleClass="text-field-modern">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin>
@@ -72,14 +72,14 @@
       </VBox>
    </center>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="81.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="192.0" prefWidth="900.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR" textAlignment="CENTER">
+            <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" styleClass="button-cadastrar" text="CADASTRAR" textAlignment="CENTER">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnAlterar" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" text="ALTERAR" textAlignment="CENTER">
+            <Button fx:id="btnAlterar" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" styleClass="button-alterar" text="ALTERAR" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -87,7 +87,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" text="BUSCAR" textAlignment="CENTER">
+            <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" styleClass="button-buscar" text="BUSCAR" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -95,7 +95,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR" textAlignment="CENTER">
+            <Button fx:id="btnExcluir" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" styleClass="button-excluir" text="EXCLUIR" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

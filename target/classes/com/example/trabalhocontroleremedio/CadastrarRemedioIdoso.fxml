@@ -14,12 +14,12 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarRemedioIdosoController">
+<BorderPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarRemedioIdosoController">
    <top>
       <HBox alignment="CENTER" prefHeight="12.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <VBox prefHeight="491.0" prefWidth="600.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
+      <VBox prefHeight="592.0" prefWidth="700.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
             <Label styleClass="label-modern" text="Nome Idoso" />
             <TextField fx:id="idoso" promptText="Nome do idoso" styleClass="text-field-modern" />
@@ -30,13 +30,13 @@
             <Label styleClass="label-modern" text="Quantidade de Dias" />
             <TextField fx:id="dias" promptText="Número de dias" styleClass="text-field-modern" />
             <Label styleClass="label-modern" text="Quantidade de vezes por dia" />
-            <Spinner fx:id="vezesDia" prefWidth="250.0" styleClass="spinner-modern">
+            <Spinner fx:id="vezesDia" prefHeight="34.0" prefWidth="250.0" styleClass="spinner-modern">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Spinner>
             <Label styleClass="label-modern" text="Planilha de horários" />
-            <GridPane prefHeight="132.0" prefWidth="598.0" styleClass="grid-pane-modern">
+            <GridPane prefHeight="182.0" prefWidth="700.0" styleClass="grid-pane-modern">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -163,7 +163,7 @@
       <Pane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="800.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="104.0" prefWidth="900.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="cadastrar" mnemonicParsing="false" onAction="#cadastrar" prefHeight="40.0" prefWidth="150.0" styleClass="button-cadastrar" text="CADASTRAR">
                <HBox.margin>

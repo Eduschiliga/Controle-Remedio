@@ -35,7 +35,7 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 
-<TabPane fx:id="principal" onKeyPressed="#trocarPainel" prefHeight="578.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.PrincipalController">
+<TabPane fx:id="principal" onKeyPressed="#trocarPainel" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.PrincipalController">
    <tabs>
       <Tab fx:id="visualizarIdoso" closable="false" text="Visualizar Idoso">
       </Tab>
