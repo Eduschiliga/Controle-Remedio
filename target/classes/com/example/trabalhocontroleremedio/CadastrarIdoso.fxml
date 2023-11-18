@@ -100,14 +100,6 @@
       <Pane prefHeight="344.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
    </right>
    <top>
-      <VBox alignment="CENTER" prefHeight="134.0" prefWidth="800.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Cadastro de Idosos">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
+      <VBox alignment="CENTER" prefHeight="92.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </top>
 </BorderPane>

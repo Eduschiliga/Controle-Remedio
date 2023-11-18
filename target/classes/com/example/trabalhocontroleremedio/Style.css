@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'Poppins Ligth';
-    src: url('../../../fontes/Poppins/Poppins-Light.ttf');
+  font-family: "Poppins Ligth";
+  src: url("../../../fontes/Poppins/Poppins-Light.ttf");
 }
 
 @font-face {
-    font-family: 'Poppins Bold';
-    src: url('../../../fontes/Poppins/Poppins-Bold.ttf');
+  font-family: "Poppins Bold";
+  src: url("../../../fontes/Poppins/Poppins-Bold.ttf");
 }
 
 @font-face {
-    font-family: 'Poppins Medium';
-    src: url('../../../fontes/Poppins/Poppins-Medium.ttf');
+  font-family: "Poppins Medium";
+  src: url("../../../fontes/Poppins/Poppins-Medium.ttf");
 }
 
 .root {
-    -fx-font-family: 'Poppins';
+  -fx-font-family: "Poppins";
 }

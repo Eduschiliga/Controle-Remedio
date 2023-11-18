@@ -13,12 +13,12 @@
 
 <BorderPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarUsuarioController">
     <top>
-        <VBox alignment="CENTER" prefHeight="51.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+        <VBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0" styleClass="root" stylesheets="@Style.css" BorderPane.alignment="CENTER" />
     </top>
     <center>
-        <VBox prefHeight="426.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <VBox prefHeight="426.0" prefWidth="600.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
             <children>
-                <Label prefHeight="27.0" prefWidth="50.0" stylesheets="@Style.css" text="Login">
+                <Label prefHeight="48.0" prefWidth="65.0" styleClass="label-modern" text="Login">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -26,8 +26,8 @@
                         <Insets />
                     </VBox.margin>
                 </Label>
-                <TextField fx:id="login" prefHeight="30.0" prefWidth="517.0" promptText="Login de usuário" />
-                <Label prefHeight="27.0" prefWidth="63.0" stylesheets="@Style.css" text="Senha">
+                <TextField fx:id="login" prefHeight="30.0" prefWidth="517.0" promptText="Login de usuário" styleClass="text-field-modern" stylesheets="@Style.css" />
+                <Label prefHeight="48.0" prefWidth="77.0" styleClass="label-modern" stylesheets="@Style.css" text="Senha">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -35,8 +35,8 @@
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Label>
-                <PasswordField fx:id="senha" prefHeight="30.0" promptText="Senha do usuário" />
-                <Label prefHeight="27.0" prefWidth="145.0" stylesheets="@Style.css" text="Tipo de usuário">
+                <PasswordField fx:id="senha" prefHeight="30.0" promptText="Senha do usuário" styleClass="text-field-modern" />
+                <Label prefHeight="27.0" prefWidth="145.0" styleClass="label-modern" stylesheets="@Style.css" text="Tipo de usuário">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -44,8 +44,8 @@
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Label>
-                <ChoiceBox fx:id="tipo" prefWidth="150.0" />
-                <Label prefHeight="27.0" prefWidth="125.0" stylesheets="@Style.css" text="Nome">
+                <ChoiceBox fx:id="tipo" prefWidth="150.0" styleClass="choice-box-modern" />
+                <Label prefHeight="27.0" prefWidth="125.0" styleClass="label-modern" stylesheets="@Style.css" text="Nome">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -53,8 +53,8 @@
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Label>
-                <TextField fx:id="nome" prefHeight="30.0" prefWidth="517.0" promptText="Nome do usuário" />
-                <Label prefHeight="27.0" prefWidth="81.0" stylesheets="@Style.css" text="Telefone">
+                <TextField fx:id="nome" prefHeight="30.0" prefWidth="517.0" promptText="Nome do usuário" styleClass="text-field-modern" />
+                <Label prefHeight="48.0" prefWidth="86.0" styleClass="label-modern" stylesheets="@Style.css" text="Telefone">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -62,8 +62,8 @@
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Label>
-                <TextField fx:id="telefone" prefHeight="30.0" prefWidth="517.0" promptText="Telefone do usuário" />
-                <Label prefHeight="27.0" prefWidth="96.0" stylesheets="@Style.css" text="Matrícula">
+                <TextField fx:id="telefone" prefHeight="30.0" prefWidth="517.0" promptText="Telefone do usuário" styleClass="text-field-modern" />
+                <Label prefHeight="27.0" prefWidth="96.0" styleClass="label-modern" stylesheets="@Style.css" text="Matrícula">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -71,7 +71,7 @@
                         <Insets top="10.0" />
                     </VBox.margin>
                 </Label>
-                <TextField fx:id="matricula" prefHeight="30.0" prefWidth="517.0" promptText="Matrícula do usuário" />
+                <TextField fx:id="matricula" prefHeight="46.0" prefWidth="600.0" promptText="Matrícula do usuário" styleClass="text-field-modern" />
             </children>
         </VBox>
     </center>
@@ -82,9 +82,9 @@
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
     </right>
     <bottom>
-        <HBox alignment="CENTER" prefHeight="119.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <HBox alignment="CENTER" prefHeight="119.0" prefWidth="800.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
             <children>
-                <Button fx:id="btnCadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR">
+                <Button fx:id="btnCadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" styleClass="button-cadastrar" text="CADASTRAR">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
@@ -92,7 +92,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
                 </Button>
-                <Button fx:id="btnAlterar" alignment="CENTER" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" text="ALTERAR">
+                <Button fx:id="btnAlterar" alignment="CENTER" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" styleClass="button-alterar" text="ALTERAR">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -100,7 +100,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
                 </Button>
-                <Button fx:id="btnBuscar" alignment="CENTER" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" text="BUSCAR">
+                <Button fx:id="btnBuscar" alignment="CENTER" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" styleClass="button-buscar" text="BUSCAR">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -108,7 +108,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
                 </Button>
-                <Button fx:id="btnExcluir" alignment="CENTER" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR">
+                <Button fx:id="btnExcluir" alignment="CENTER" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" styleClass="button-excluir" text="EXCLUIR">
                     <font>
                         <Font size="18.0" />
                     </font>

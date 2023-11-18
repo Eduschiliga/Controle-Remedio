@@ -1,0 +1,125 @@
+.label-modern {
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #000;
+  -fx-background-color: #f2f2f2;
+  -fx-border-width: 0;
+  -fx-padding: 5px;
+  -fx-margin-bottom: 10px;
+}
+
+.text-field-modern {
+  -fx-font-size: 12px;
+  -fx-prompt-text-fill: #999;
+  -fx-background-color: #fff;
+  -fx-border-color: #ddd;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+  -fx-padding: 8px;
+  -fx-margin-bottom: 10px;
+}
+
+.choice-box-modern {
+  -fx-font-size: 12px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #000;
+  -fx-background-color: #f2f2f2;
+  -fx-border-color: #ddd;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+  -fx-padding: 5px;
+  -fx-margin-bottom: 10px;
+}
+
+.choice-box-modern .arrow-button {
+  -fx-background-color: #f2f2f2;
+  -fx-background-radius: 0;
+  -fx-padding: 0;
+}
+
+.choice-box-modern .arrow {
+  -fx-background-color: #333;
+  -fx-padding: 5px;
+}
+
+.choice-box-modern .arrow:hover {
+  -fx-background-color: #999;
+}
+
+.button-cadastrar {
+  -fx-font-size: 10px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #fff;
+  -fx-background-color: #4caf50;
+  -fx-border-color: #4caf50;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+  -fx-padding: 3px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 0, 1);
+  -fx-pref-width: 80px;
+  -fx-pref-height: 34px;
+  -fx-margin-bottom: 10px;
+}
+
+.button-alterar {
+  -fx-font-size: 10px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #fff;
+  -fx-background-color: #2196f3;
+  -fx-border-color: #2196f3;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+  -fx-padding: 3px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 0, 1);
+  -fx-pref-width: 80px;
+  -fx-pref-height: 34px;
+  -fx-margin-bottom: 10px;
+}
+
+.button-buscar {
+  -fx-font-size: 10px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #fff;
+  -fx-background-color: #ff9800;
+  -fx-border-color: #ff9800;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+  -fx-padding: 3px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 0, 1);
+  -fx-pref-width: 80px;
+  -fx-pref-height: 34px;
+  -fx-margin-bottom: 10px;
+}
+
+.button-excluir {
+  -fx-font-size: 10px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #fff;
+  -fx-background-color: #f44336;
+  -fx-border-color: #f44336;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+  -fx-padding: 3px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 0, 1);
+  -fx-pref-width: 80px;
+  -fx-pref-height: 34px;
+  -fx-margin-bottom: 10px;
+}
+
+.checkbox-modern {
+  -fx-font-size: 12px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #000;
+  -fx-background-color: #f2f2f2;
+  -fx-border-color: #ddd;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+}
+
+.grid-pane-modern {
+  -fx-background-color: #f2f2f2;
+  -fx-border-color: #ddd;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px 5px 5px 5px;
+  -fx-padding: 5px;
+}

@@ -13,39 +13,30 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <BorderPane prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarRemedioIdosoController">
    <top>
-      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="800.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" text="Cadastrar Idoso e Remédio">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-         </children>
-      </HBox>
+      <HBox alignment="CENTER" prefHeight="12.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="491.0" prefWidth="600.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Nome Idoso" />
-            <TextField fx:id="idoso" promptText="Nome do idoso" />
-            <Label text="Nome Remédio" />
-            <TextField fx:id="remedio" promptText="Nome do remédio" />
-            <Label text="Dosagem" />
-            <TextField fx:id="dosagem" promptText="Dosagem do remédio" />
-            <Label text="Quantidade de Dias" />
-            <TextField fx:id="dias" promptText="Número de dias" />
-            <Label text="Quantidade de vezes por dia" />
-            <Spinner fx:id="vezesDia" prefWidth="250.0">
+            <Label styleClass="label-modern" text="Nome Idoso" />
+            <TextField fx:id="idoso" promptText="Nome do idoso" styleClass="text-field-modern" />
+            <Label styleClass="label-modern" text="Nome Remédio" />
+            <TextField fx:id="remedio" promptText="Nome do remédio" styleClass="text-field-modern" />
+            <Label styleClass="label-modern" text="Dosagem" />
+            <TextField fx:id="dosagem" promptText="Dosagem do remédio" styleClass="text-field-modern" />
+            <Label styleClass="label-modern" text="Quantidade de Dias" />
+            <TextField fx:id="dias" promptText="Número de dias" styleClass="text-field-modern" />
+            <Label styleClass="label-modern" text="Quantidade de vezes por dia" />
+            <Spinner fx:id="vezesDia" prefWidth="250.0" styleClass="spinner-modern">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Spinner>
-            <Label text="Planilha de horários" />
-            <GridPane>
+            <Label styleClass="label-modern" text="Planilha de horários" />
+            <GridPane prefHeight="132.0" prefWidth="598.0" styleClass="grid-pane-modern">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -61,31 +52,106 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <CheckBox mnemonicParsing="false" text="01:00" />
-                  <CheckBox mnemonicParsing="false" text="02:00" GridPane.rowIndex="1" />
-                  <CheckBox mnemonicParsing="false" text="03:00" GridPane.rowIndex="2" />
-                  <CheckBox mnemonicParsing="false" text="04:00" GridPane.rowIndex="3" />
-                  <CheckBox mnemonicParsing="false" text="05:00" GridPane.rowIndex="4" />
-                  <CheckBox mnemonicParsing="false" text="06:00" GridPane.rowIndex="5" />
-                  <CheckBox mnemonicParsing="false" text="07:00" GridPane.columnIndex="1" />
-                  <CheckBox mnemonicParsing="false" text="08:00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <CheckBox mnemonicParsing="false" text="09:00" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <CheckBox mnemonicParsing="false" text="10:00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <CheckBox mnemonicParsing="false" text="11:00" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <CheckBox mnemonicParsing="false" text="12:00" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <CheckBox mnemonicParsing="false" text="13:00" GridPane.columnIndex="2" />
-                  <CheckBox mnemonicParsing="false" text="14:00" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <CheckBox mnemonicParsing="false" text="15:00" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <CheckBox mnemonicParsing="false" text="16:00" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <CheckBox mnemonicParsing="false" text="17:00" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                  <CheckBox mnemonicParsing="false" text="18:00" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                  <CheckBox mnemonicParsing="false" text="19:00" GridPane.columnIndex="3" />
-                  <CheckBox mnemonicParsing="false" text="20:00" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <CheckBox mnemonicParsing="false" text="21:00" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <CheckBox mnemonicParsing="false" text="22:00" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <CheckBox mnemonicParsing="false" text="23:00" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                  <CheckBox mnemonicParsing="false" text="24:00" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="01:00">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="02:00" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="03:00" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="04:00" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="05:00" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="06:00" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="07:00" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="08:00" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="09:00" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="10:00" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="11:00" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="12:00" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="13:00" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="14:00" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="15:00" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="16:00" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="17:00" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="18:00" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="19:00" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="20:00" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="21:00" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="22:00" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="23:00" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
+                  <CheckBox mnemonicParsing="false" styleClass="checkbox-modern" text="24:00" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets bottom="7.0" top="7.0" />
+                     </GridPane.margin></CheckBox>
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </GridPane>
          </children>
       </VBox>
@@ -97,24 +163,24 @@
       <Pane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
-      <HBox prefHeight="94.0" prefWidth="657.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="800.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="cadastrar" mnemonicParsing="false" onAction="#cadastrar" prefHeight="40.0" prefWidth="150.0" text="CADASTRAR">
+            <Button fx:id="cadastrar" mnemonicParsing="false" onAction="#cadastrar" prefHeight="40.0" prefWidth="150.0" styleClass="button-cadastrar" text="CADASTRAR">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="editar" mnemonicParsing="false" onAction="#editar" prefHeight="40.0" prefWidth="150.0" text="EDITAR">
+            <Button fx:id="editar" mnemonicParsing="false" onAction="#editar" prefHeight="40.0" prefWidth="150.0" styleClass="button-alterar" text="EDITAR">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="buscar" mnemonicParsing="false" onAction="#buscar" prefHeight="40.0" prefWidth="150.0" text="BUSCAR">
+            <Button fx:id="buscar" mnemonicParsing="false" onAction="#buscar" prefHeight="40.0" prefWidth="150.0" styleClass="button-buscar" text="BUSCAR">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="excluir" mnemonicParsing="false" onAction="#excluir" prefHeight="40.0" prefWidth="150.0" text="EXCLUIR">
+            <Button fx:id="excluir" mnemonicParsing="false" onAction="#excluir" prefHeight="40.0" prefWidth="150.0" styleClass="button-excluir" text="EXCLUIR">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
