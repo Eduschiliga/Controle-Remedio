@@ -8,7 +8,8 @@ public class JPAUtils {
 
     public static EntityManagerFactory getEntityManagerFactory(){
         if (EMF == null){
-            EMF = Persistence.createEntityManagerFactory();
+            EMF = Persistence.createEntityManagerFactory("trabalho");
         }
+        return EMF;
     }
 }

@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import java.io.IOException;
+//import com.example.trabalhocontroleremedio.JPAUtils;
 
 public class HelloApplication extends Application {
     private static Stage stage;
@@ -41,6 +42,7 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         //Inicia o programa
+        //JPAUtils.getEntityManagerFactory();
         launch();
     }
 }
