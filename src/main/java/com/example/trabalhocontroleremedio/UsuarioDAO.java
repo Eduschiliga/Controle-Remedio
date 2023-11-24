@@ -1,5 +1,7 @@
 package com.example.trabalhocontroleremedio;
 
+import java.util.List;
+
 public class UsuarioDAO extends AbstrataDAO<UsuarioJPAController, Usuario>{
     
     public UsuarioDAO(){
@@ -9,5 +11,25 @@ public class UsuarioDAO extends AbstrataDAO<UsuarioJPAController, Usuario>{
     @Override
     public void cadastrar(Usuario objeto) throws Exception{
         objetoJPA.criar(objeto);
+    }
+
+    @Override
+    public void editar(Usuario objeto) throws Exception{
+        objetoJPA.editar(objeto);
+    }
+
+    @Override
+    public void excluir(Usuario objeto) throws Exception{
+        objetoJPA.deletar(objeto.getMatricula());
+    }
+
+    @Override
+    public Usuario buscar(Usuario objeto){
+        return objetoJPA.encontrarUsuario(objeto.getMatricula());
+    }
+
+    @Override
+    public List<Usuario> buscarTodos(){
+        return objetoJPA.encontrarEntidadesUsuario();
     }
 }

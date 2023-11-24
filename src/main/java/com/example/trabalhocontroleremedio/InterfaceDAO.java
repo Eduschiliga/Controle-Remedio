@@ -9,6 +9,6 @@ public interface InterfaceDAO<J,E> {
     public void cadastrar(E objeto) throws Exception;
     public void editar(E objeto) throws Exception;
     public void excluir(E objeto) throws Exception;
-    public E bucar(E objeto);
+    public E buscar(E objeto);
     public List<E> buscarTodos();
 }

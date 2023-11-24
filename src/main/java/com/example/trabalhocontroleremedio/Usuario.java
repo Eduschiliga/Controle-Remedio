@@ -1,76 +1,120 @@
 package com.example.trabalhocontroleremedio;
 
-public class Usuario {
-    private String login;
-    private String senha;
-    private String tipo;
-    private String nome;
-    private String telefone;
-    private int matricula;
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
-    public String getLogin() {
-        return this.login;
+@Entity
+@Table(name = "usuario")
+@NamedQueries({
+    @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u"),
+    @NamedQuery(name = "Usuario.findByMatricula", query = "SELECT u FROM Usuario u WHERE u.matricula = :matricula"),
+    @NamedQuery(name = "Usuario.findByLogin", query = "SELECT u FROM Usuario u WHERE u.login = :login"),
+    @NamedQuery(name = "Usuario.findBySenha", query = "SELECT u FROM Usuario u WHERE u.senha = :senha"),
+    @NamedQuery(name = "Usuario.findByTipo", query = "SELECT u FROM Usuario u WHERE u.tipo = :tipo"),
+    @NamedQuery(name = "Usuario.findByNome", query = "SELECT u FROM Usuario u WHERE u.nome = :nome"),
+    @NamedQuery(name = "Usuario.findByTelefone", query = "SELECT u FROM Usuario u WHERE u.telefone = :telefone")})
+public class Usuario implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    @Id
+    @Basic(optional = false)
+    @Column(name = "matricula")
+    private Integer matricula;
+    @Column(name = "login")
+    private Serializable login;
+    @Column(name = "senha")
+    private Serializable senha;
+    @Column(name = "tipo")
+    private Serializable tipo;
+    @Column(name = "nome")
+    private Serializable nome;
+    @Column(name = "telefone")
+    private Serializable telefone;
+
+    public Usuario() {
     }
 
-    public String getSenha() {
-        return this.senha;
-    }
-
-    public String getTipo() {
-        return this.tipo;
-    }
-
-    public String getNome() {
-        return this.nome;
-    }
-
-    public String getTelefone() {
-        return this.telefone;
-    }
-
-    public int getMatricula() {
-        return this.matricula;
-    }
-
-    public Usuario(){
-        this.login = null;
-        this.senha = null;
-        this.tipo = null;
-        this.nome = null;
-        this.telefone = null;
-        this.matricula = 0;
-    }
-
-    public void adicionarUsuario(String login, String senha, String tipo, String nome, String telefone, int matricula){ // Adiciona usuário ao banco
-        this.login = login;
-        this.senha = senha;
-        this.tipo = tipo;
-        this.nome = nome;
-        this.telefone = telefone;
+    public Usuario(Integer matricula) {
         this.matricula = matricula;
     }
 
-    public void alterarUsuario(String login, String senha, String tipo, String nome, String telefone, int matricula){ // Altera o usuário no banco
-        this.login = login;
-        this.senha = senha;
-        this.tipo = tipo;
-        this.nome = nome;
-        this.telefone = telefone;
+    public Integer getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(Integer matricula) {
         this.matricula = matricula;
     }
 
-    public void excluirUsuario(){ // Exclui usuário do banco
-        this.login = null;
-        this.senha = null;
-        this.tipo = null;
-        this.nome = null;
-        this.telefone = null;
-        this.matricula = 0;
+    public Serializable getLogin() {
+        return login;
+    }
+
+    public void setLogin(Serializable login) {
+        this.login = login;
+    }
+
+    public Serializable getSenha() {
+        return senha;
+    }
+
+    public void setSenha(Serializable senha) {
+        this.senha = senha;
+    }
+
+    public Serializable getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(Serializable tipo) {
+        this.tipo = tipo;
+    }
+
+    public Serializable getNome() {
+        return nome;
+    }
+
+    public void setNome(Serializable nome) {
+        this.nome = nome;
+    }
+
+    public Serializable getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(Serializable telefone) {
+        this.telefone = telefone;
     }
 
     @Override
-    public String toString(){
-        return "Usuário:\nLogin: " + this.login + "\nSenha: " + this.senha + "\nTipo: " + this.tipo + "\nNome: " + this.nome +
-                "\nTelefone: " + this.telefone + "\nMatricula: " + this.matricula;
+    public int hashCode() {
+        int hash = 0;
+        hash += (matricula != null ? matricula.hashCode() : 0);
+        return hash;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Usuario)) {
+            return false;
+        }
+        Usuario other = (Usuario) object;
+        if ((this.matricula == null && other.matricula != null) || (this.matricula != null && !this.matricula.equals(other.matricula))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "com.mycompany.mavenproject3.Usuario[ matricula=" + matricula + " ]";
+    }
+    
 }
