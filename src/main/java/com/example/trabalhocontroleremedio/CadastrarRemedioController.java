@@ -46,14 +46,14 @@ public class CadastrarRemedioController {
 
     @FXML
     void alterar(ActionEvent event) { // Faz a alteração dos dados do remédio no banco
-        int dosagem = 0;
+        int dosagem;
         try {
             dosagem = Integer.parseInt(this.dosagem.getText());
+            this.remedio.alterarRemedio(this.nome.getText(), this.nomeGenerico.getText(), this.categoria.getText(), dosagem, this.formaDosagem.getText());
+            HelloApplication.escreverLog(Login.getLogin() + " alterou " + this.nome.getText());
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");
         }
-
-        this.remedio.alterarRemedio(this.nome.getText(), this.nomeGenerico.getText(), this.categoria.getText(), dosagem, this.formaDosagem.getText());
     }
 
     @FXML
@@ -68,25 +68,25 @@ public class CadastrarRemedioController {
     @FXML
     void cadastrar(ActionEvent event) { // Cadastra o remédio no banco
         this.remedio = new Remedio();
-
-        int dosagem = 0;
+        int dosagem;
         try {
             dosagem = Integer.parseInt(this.dosagem.getText());
+            this.remedio.alterarRemedio(this.nome.getText(), this.nomeGenerico.getText(), this.categoria.getText(), dosagem, this.formaDosagem.getText());
+            HelloApplication.escreverLog(Login.getLogin() + " cadastrou " + this.nome.getText());
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");
         }
-
-        this.remedio.alterarRemedio(this.nome.getText(), this.nomeGenerico.getText(), this.categoria.getText(), dosagem, this.formaDosagem.getText());
     }
 
     @FXML
     void excluir(ActionEvent event) { // Exclui um remédio do banco
         this.remedio.excluirRemedio();
-       this.nome.setText(null);
+        this.nome.setText(null);
         this.nomeGenerico.setText(null);
         this.categoria.setText(null);
         this.dosagem.setText(null);
         this.formaDosagem.setText(null);
+        HelloApplication.escreverLog(Login.getLogin() + " excluiu " + this.nome.getText());
     }
 
     @FXML

@@ -1,18 +1,22 @@
 package com.example.trabalhocontroleremedio;
 
 public class Login {
-    private String login;
-    private String senha;
+    private static String login;
+    private static String senha;
 
     public Login(){
-        this.login = "admin";
-        this.senha = "admin";
+        Login.login = "admin";
+        Login.senha = "admin";
     }
 
     public boolean buscar(String login, String senha){ // Busca o usuário no banco para verificação
-        if(this.login.equals(login) && this.senha.equals(senha)){
+        if(Login.login.equals(login) && Login.senha.equals(senha)){
             return true;
         }
         return false;
+    }
+
+    public static String getLogin(){
+        return Login.login;
     }
 }

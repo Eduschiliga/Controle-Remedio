@@ -45,22 +45,22 @@ public class CadastrarRemedioIdosoController {
 
     @FXML
     void buscar(ActionEvent event) {
-
-    }
-
-    @FXML
-    void cadastrar(ActionEvent event) {
         
     }
 
     @FXML
-    void editar(ActionEvent event) {
+    void cadastrar(ActionEvent event) {
+        HelloApplication.escreverLog(Login.getLogin() + " cadastrou remédio idoso");
+    }
 
+    @FXML
+    void editar(ActionEvent event) {
+        HelloApplication.escreverLog(Login.getLogin() + " editou remédio idoso");
     }
 
     @FXML
     void excluir(ActionEvent event) {
-
+        HelloApplication.escreverLog(Login.getLogin() + " excluiu remédio idoso");
     }
 
     @FXML

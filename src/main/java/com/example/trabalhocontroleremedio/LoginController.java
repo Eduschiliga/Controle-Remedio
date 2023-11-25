@@ -26,6 +26,7 @@ public class LoginController {
         usuario = new Login();
         validacao = usuario.buscar(login.getText(),senha.getText());
         if(validacao){
+            HelloApplication.escreverLog("Login: " + login.getText());
             HelloApplication.trocarTela("Principal");
         }else{
             System.out.println("Usuário ou senha errados");

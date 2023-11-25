@@ -40,7 +40,7 @@ public class CadastrarIdosoController {
 
     @FXML
     void alterar(ActionEvent event) {
-
+        HelloApplication.escreverLog(Login.getLogin() + " alterou idoso " + this.nome.getText());
     }
 
     @FXML
@@ -51,11 +51,12 @@ public class CadastrarIdosoController {
     @FXML
     void cadastrar(ActionEvent event) {
         System.out.println(nascimento.getValue());
+        HelloApplication.escreverLog(Login.getLogin() + " cadastrou idoso " + this.nome.getText());
     }
 
     @FXML
     void excluir(ActionEvent event) {
-
+        HelloApplication.escreverLog(Login.getLogin() + " excluiu idoso " + this.nome.getText());
     }
 
     @FXML
