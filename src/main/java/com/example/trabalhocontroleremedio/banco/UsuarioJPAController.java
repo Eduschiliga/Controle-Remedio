@@ -1,4 +1,4 @@
-package com.example.trabalhocontroleremedio;
+package com.example.trabalhocontroleremedio.banco;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,6 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
+
+import com.example.trabalhocontroleremedio.modelo.Usuario;
 
 public class UsuarioJPAController implements Serializable{
     

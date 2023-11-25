@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import java.io.IOException;
+
 import com.example.trabalhocontroleremedio.arquivo.GravarTexto;
 
 public class HelloApplication extends Application {

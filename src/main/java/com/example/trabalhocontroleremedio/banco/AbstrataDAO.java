@@ -1,4 +1,4 @@
-package com.example.trabalhocontroleremedio;
+package com.example.trabalhocontroleremedio.banco;
 
 import javax.persistence.EntityManagerFactory;
 

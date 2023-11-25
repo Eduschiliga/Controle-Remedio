@@ -1,9 +1,9 @@
-module com.example.trabalhocontroleremedio {
+open module com.example.trabalhocontroleremedio {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
     requires java.persistence;
-    
-    opens com.example.trabalhocontroleremedio to javafx.fxml;
+    requires org.hibernate.orm.core;
+
     exports com.example.trabalhocontroleremedio;
 }

@@ -1,5 +1,7 @@
 package com.example.trabalhocontroleremedio;
 
+import com.example.trabalhocontroleremedio.modelo.Login;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

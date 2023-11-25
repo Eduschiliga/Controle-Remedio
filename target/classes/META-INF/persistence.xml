@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
-                                 http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
-             version="2.0">
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
 
-    <persistence-unit name="trabalho" transaction-type="RESOURCE_LOCAL">
-        <!-- Configure your JPA properties here -->
-        <!-- Example: -->
-        <!-- <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mydatabase"/>
-            <property name="javax.persistence.jdbc.user" value="username"/>
-            <property name="javax.persistence.jdbc.password" value="password"/>
-        </properties> -->
+    <persistence-unit name="trabalho">
+        <!--<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
+        <class>com.example.trabalhocontroleremedio.Usuario</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/trabalhoIdosoRemedio" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password" value="84627913" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+
+        </properties>
     </persistence-unit>
-
 </persistence>

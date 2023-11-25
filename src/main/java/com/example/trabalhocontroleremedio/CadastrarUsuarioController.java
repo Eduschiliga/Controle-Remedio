@@ -7,11 +7,17 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.collections.ObservableList;
+
+import com.example.trabalhocontroleremedio.banco.UsuarioDAO;
+import com.example.trabalhocontroleremedio.modelo.Login;
+import com.example.trabalhocontroleremedio.modelo.Usuario;
+
 import javafx.collections.FXCollections;
 
 public class CadastrarUsuarioController {
 
-    //private Usuario user;
+    private Usuario usuario;
+    private UsuarioDAO jpa;
     private ObservableList<String> listaTipo;
 
     @FXML
@@ -46,16 +52,22 @@ public class CadastrarUsuarioController {
 
     @FXML
     void cadastrar(ActionEvent event) { // Cadastra usuário no banco
-        //this.user = new Usuario();
         int matricula;
         try {
             matricula = Integer.parseInt(this.matricula.getText());
+            usuario.setLogin(this.login.getText());
+            usuario.setNome(this.nome.getText());
+            usuario.setSenha(this.senha.getText());
+            usuario.setMatricula(matricula);
+            usuario.setTelefone(this.telefone.getText());
+            usuario.setTipo(this.tipo.getValue());
+            jpa.cadastrar(usuario);
             HelloApplication.escreverLog(Login.getLogin() + " cadastrou usuário com matrícula: " + this.matricula.getText());
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");
+        }catch (Exception ex){
+            System.out.println(ex);
         }
-
-        //this.user.adicionarUsuario(this.login.getText(), this.senha.getText(), this.tipo.getValue(), this.nome.getText(), this.telefone.getText(), matricula);
     }
 
     @FXML
@@ -101,6 +113,8 @@ public class CadastrarUsuarioController {
         listaTipo = FXCollections.observableArrayList("Usuário", "Administrador");
         tipo.setItems(listaTipo);
         tipo.setValue("Usuário");
+        usuario = new Usuario();
+        jpa = new UsuarioDAO();
     }
 
 }

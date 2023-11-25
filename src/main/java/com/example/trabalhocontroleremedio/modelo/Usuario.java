@@ -1,4 +1,4 @@
-package com.example.trabalhocontroleremedio;
+package com.example.trabalhocontroleremedio.modelo;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -27,15 +27,15 @@ public class Usuario implements Serializable {
     @Column(name = "matricula")
     private Integer matricula;
     @Column(name = "login")
-    private Serializable login;
+    private String login;
     @Column(name = "senha")
-    private Serializable senha;
+    private String senha;
     @Column(name = "tipo")
-    private Serializable tipo;
+    private String tipo;
     @Column(name = "nome")
-    private Serializable nome;
+    private String nome;
     @Column(name = "telefone")
-    private Serializable telefone;
+    private String telefone;
 
     public Usuario() {
     }
@@ -52,43 +52,43 @@ public class Usuario implements Serializable {
         this.matricula = matricula;
     }
 
-    public Serializable getLogin() {
+    public String getLogin() {
         return login;
     }
 
-    public void setLogin(Serializable login) {
+    public void setLogin(String login) {
         this.login = login;
     }
 
-    public Serializable getSenha() {
+    public String getSenha() {
         return senha;
     }
 
-    public void setSenha(Serializable senha) {
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 
-    public Serializable getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(Serializable tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-    public Serializable getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(Serializable nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public Serializable getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(Serializable telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
@@ -114,7 +114,7 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject3.Usuario[ matricula=" + matricula + " ]";
+        return "Usuário:\nMatrícula: " + matricula + "\nLogin: " + login + "\nNome: " + nome + "\nTelefone: " + telefone + "\nTipo: " + tipo;
     }
     
 }

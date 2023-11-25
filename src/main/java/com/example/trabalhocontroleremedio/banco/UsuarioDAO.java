@@ -1,6 +1,8 @@
-package com.example.trabalhocontroleremedio;
+package com.example.trabalhocontroleremedio.banco;
 
 import java.util.List;
+
+import com.example.trabalhocontroleremedio.modelo.Usuario;
 
 public class UsuarioDAO extends AbstrataDAO<UsuarioJPAController, Usuario>{
     

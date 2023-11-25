@@ -1,4 +1,4 @@
-package com.example.trabalhocontroleremedio;
+package com.example.trabalhocontroleremedio.modelo;
 
 public class Remedio {
     private String nome;
