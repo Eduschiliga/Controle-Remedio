@@ -12,24 +12,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarIdosoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../../../estilos/LabelTextField.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarIdosoController">
    <center>
-      <VBox prefHeight="254.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="254.0" prefWidth="600.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Nome">
+            <Label styleClass="label-modern" text="Nome">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <TextField fx:id="nome" prefHeight="40.0" prefWidth="426.0" promptText="Nome do idoso">
+            <TextField fx:id="nome" prefHeight="40.0" prefWidth="426.0" promptText="Nome do idoso" styleClass="text-field-modern">
                <VBox.margin>
                   <Insets right="10.0" />
                </VBox.margin></TextField>
             <VBox prefHeight="70.0" prefWidth="168.0">
                <children>
-                  <Label text="Data de Nascimento">
+                  <Label styleClass="label-modern" text="Data de Nascimento">
                      <VBox.margin>
                         <Insets bottom="5.0" top="10.0" />
                      </VBox.margin>
@@ -40,7 +40,7 @@
                   <DatePicker fx:id="nascimento" prefHeight="40.0" prefWidth="200.0" promptText="Data de nascimento" />
                </children>
             </VBox>
-            <Label text="Sexo">
+            <Label styleClass="label-modern" text="Sexo">
                <padding>
                   <Insets left="5.0" />
                </padding>
@@ -51,14 +51,14 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <ComboBox fx:id="sexo" prefHeight="40.0" prefWidth="200.0" promptText="Sexo" visibleRowCount="2" />
+            <ComboBox fx:id="sexo" prefHeight="40.0" prefWidth="200.0" promptText="Sexo" styleClass="choice-box-modern" visibleRowCount="2" />
          </children>
       </VBox>
    </center>
    <bottom>
       <HBox alignment="CENTER" prefHeight="175.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" text="CADASTRAR" textAlignment="CENTER">
+            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" styleClass="button-cadastrar" text="CADASTRAR" textAlignment="CENTER">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
@@ -66,7 +66,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="alterar" alignment="CENTER" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" text="ALTERAR" textAlignment="CENTER">
+            <Button fx:id="alterar" alignment="CENTER" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" styleClass="button-alterar" text="ALTERAR" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="buscar" alignment="CENTER" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" text="BUSCAR" textAlignment="CENTER">
+            <Button fx:id="buscar" alignment="CENTER" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" styleClass="button-buscar" text="BUSCAR" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -82,7 +82,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="excluir" alignment="CENTER" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" text="EXCLUIR" textAlignment="CENTER">
+            <Button fx:id="excluir" alignment="CENTER" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" styleClass="button-excluir" text="EXCLUIR" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -94,10 +94,10 @@
       </HBox>
    </bottom>
    <left>
-      <Pane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <Pane prefHeight="344.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
    </right>
    <top>
       <VBox alignment="CENTER" prefHeight="92.0" prefWidth="800.0" BorderPane.alignment="CENTER" />

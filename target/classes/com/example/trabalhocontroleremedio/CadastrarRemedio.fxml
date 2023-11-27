@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarRemedioController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarRemedioController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
@@ -110,9 +110,9 @@
       <HBox alignment="CENTER" prefHeight="53.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </top>
    <left>
-      <Pane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <Pane prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>

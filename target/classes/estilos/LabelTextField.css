@@ -56,8 +56,8 @@
   -fx-border-radius: 5px;
   -fx-padding: 3px;
   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 0, 1);
-  -fx-pref-width: 80px;
-  -fx-pref-height: 34px;
+  -fx-pref-width: 100px;
+  -fx-pref-height: 35px;
   -fx-margin-bottom: 10px;
 }
 
@@ -71,8 +71,8 @@
   -fx-border-radius: 5px;
   -fx-padding: 3px;
   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 0, 1);
-  -fx-pref-width: 80px;
-  -fx-pref-height: 34px;
+  -fx-pref-width: 100px;
+  -fx-pref-height: 35px;
   -fx-margin-bottom: 10px;
 }
 
@@ -86,8 +86,8 @@
   -fx-border-radius: 5px;
   -fx-padding: 3px;
   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 0, 1);
-  -fx-pref-width: 80px;
-  -fx-pref-height: 34px;
+  -fx-pref-width: 100px;
+  -fx-pref-height: 35px;
   -fx-margin-bottom: 10px;
 }
 
@@ -101,8 +101,8 @@
   -fx-border-radius: 5px;
   -fx-padding: 3px;
   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0, 0, 1);
-  -fx-pref-width: 80px;
-  -fx-pref-height: 34px;
+  -fx-pref-width: 100px;
+  -fx-pref-height: 35px;
   -fx-margin-bottom: 10px;
 }
 
@@ -122,4 +122,14 @@
   -fx-border-width: 1px;
   -fx-border-radius: 5px 5px 5px 5px;
   -fx-padding: 5px;
+}
+
+.date-picker {
+  -fx-font-size: 12px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #000;
+  -fx-background-color: #f2f2f2;
+  -fx-border-color: #ddd;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
 }
