@@ -117,4 +117,24 @@ public class UsuarioJPAController implements Serializable{
     public List<Usuario> encontrarEntidadesUsuario(){
         return encontrarEntidadesUsuario(true, -1, -1);
     }
+
+    public Usuario encontrarUsuarioLoginSenha(String login){
+        EntityManager em = getEntityManager();
+        //int teste;
+        try{
+            //teste = em.createNamedQuery("Usuario.findByLoginSenha", Usuario.class).getFirstResult();
+            return em.find(Usuario.class,login);
+        }finally{
+            em.close();
+        }
+    }
+
+    /*public Usuario encontrarUsuarioLoginSenha(String login){
+        EntityManager em = getEntityManager();
+        try{
+            return em.find(Usuario.class, login);
+        }finally{
+            em.close();
+        }
+    }*/
 }

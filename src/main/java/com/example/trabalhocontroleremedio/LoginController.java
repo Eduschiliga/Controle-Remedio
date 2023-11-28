@@ -25,8 +25,8 @@ public class LoginController {
     @FXML
     void entrar(ActionEvent event) { // Validação de login
         boolean validacao;
-        usuario = new Login();
-        validacao = usuario.buscar(login.getText(),senha.getText());
+        usuario = new Login(login.getText(),senha.getText());
+        validacao = usuario.buscar();
         if(validacao){
             HelloApplication.escreverLog("Login: " + login.getText());
             HelloApplication.trocarTela("Principal");

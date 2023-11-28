@@ -34,4 +34,8 @@ public class UsuarioDAO extends AbstrataDAO<UsuarioJPAController, Usuario>{
     public List<Usuario> buscarTodos(){
         return objetoJPA.encontrarEntidadesUsuario();
     }
+
+    public Usuario buscarMatricula(Usuario objeto){
+        return objetoJPA.encontrarUsuarioLoginSenha(objeto.getLogin());
+    }
 }
