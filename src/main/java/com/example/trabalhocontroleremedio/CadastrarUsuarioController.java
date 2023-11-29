@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.collections.ObservableList;
 
 import com.example.trabalhocontroleremedio.banco.UsuarioDAO;
+import com.example.trabalhocontroleremedio.excecao.CampoVazioExcecao;
 import com.example.trabalhocontroleremedio.modelo.Login;
 import com.example.trabalhocontroleremedio.modelo.Usuario;
 
@@ -72,11 +73,23 @@ public class CadastrarUsuarioController {
 
     @FXML
     void buscar(ActionEvent event) { // Busca usuário no banco
-        /*this.login.setText(this.user.getLogin());
-        this.tipo.setValue(this.user.getTipo());
-        this.nome.setText(this.user.getNome());
-        this.telefone.setText(this.user.getTelefone());
-        this.matricula.setText(Integer.toString(this.user.getMatricula()));*/
+        try{
+            if(matricula.getText().equals("")){
+                throw new CampoVazioExcecao();
+            }
+            usuario.setMatricula(Integer.parseInt(this.matricula.getText()));
+            usuario = jpa.buscar(usuario);
+            if(usuario != null){
+                nome.setText(usuario.getNome());
+                login.setText(usuario.getLogin());
+                tipo.setValue(usuario.getTipo());
+                telefone.setText(usuario.getTelefone());
+            }
+        }catch(CampoVazioExcecao CVE){
+            System.out.println("Campo matrícula vazio!");
+        }catch(NumberFormatException NFE){
+            System.out.println("Necessário utilizar apenas números na matricula!");
+        }
     }
 
     @FXML

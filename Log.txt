@@ -11,3 +11,7 @@ admin cadastrou usuário com matrícula: 1
 Login: admin
 Login: marcos
 Login: admin
+Login: admin
+Login: admin
+Login: marcos
+Login: admin
