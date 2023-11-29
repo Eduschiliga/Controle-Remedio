@@ -32,24 +32,31 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
 
-<TabPane fx:id="principal" onKeyPressed="#trocarPainel" prefHeight="700.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.PrincipalController">
-   <tabs>
-      <Tab fx:id="visualizarIdoso" closable="false" text="Visualizar Idoso">
-      </Tab>
-      <Tab fx:id="cadastrarUsuario" closable="false" text="Cadastrar Usuário">
-        <fx:include source="CadastrarUsuario.fxml" />
-      </Tab>
-      <Tab fx:id="cadastrarIdoso" closable="false" text="Cadastrar Idoso">
-        <fx:include source="CadastrarIdoso.fxml" />
-      </Tab>
-      <Tab fx:id="cadastrarRemedio" closable="false" text="Cadastrar Remedio">
-        <fx:include source="CadastrarRemedio.fxml" />
-      </Tab>
-      <Tab fx:id="cadastrarRemedioIdoso" closable="false" text="Cadastrar Remedio Idoso">
-        <fx:include source="CadastrarRemedioIdoso.fxml" />
-      </Tab>
-   </tabs>
-</TabPane>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar prefHeight="2.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Principal F1" />
+            <Menu mnemonicParsing="false" text="Cadastrar F2">
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Usuário" />
+                <MenuItem mnemonicParsing="false" text="Idoso" />
+                  <MenuItem mnemonicParsing="false" text="Remédio" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Vincular F3">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda F4" />
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
