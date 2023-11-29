@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 
@@ -118,23 +119,15 @@ public class UsuarioJPAController implements Serializable{
         return encontrarEntidadesUsuario(true, -1, -1);
     }
 
-    public Usuario encontrarUsuarioLoginSenha(String login){
+    public Usuario encontrarUsuarioLogin(String login){
         EntityManager em = getEntityManager();
-        //int teste;
         try{
-            //teste = em.createNamedQuery("Usuario.findByLoginSenha", Usuario.class).getFirstResult();
-            return em.find(Usuario.class,login);
+            return em.createQuery("SELECT u FROM Usuario u WHERE u.login = :login", Usuario.class).setParameter("login", login).getSingleResult();
+        }catch(NoResultException NRE){
+            System.out.println("Usuário não encontrado");
+            return null;
         }finally{
             em.close();
         }
     }
-
-    /*public Usuario encontrarUsuarioLoginSenha(String login){
-        EntityManager em = getEntityManager();
-        try{
-            return em.find(Usuario.class, login);
-        }finally{
-            em.close();
-        }
-    }*/
 }

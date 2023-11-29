@@ -70,14 +70,18 @@
                   <Insets bottom="12.0" left="100.0" right="100.0" />
                </VBox.margin>
             </PasswordField>
-            <VBox prefHeight="200.0" prefWidth="100.0" />
+            <Label fx:id="excecao" textFill="RED">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
          </children>
       </VBox>
    </center>
    <top>
-      <VBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0" stylesheets="@Style.css" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label id="entrar" prefHeight="34.0" prefWidth="76.0" stylesheets="@Style.css" text="Entrar">
+            <Label id="entrar" prefHeight="34.0" prefWidth="76.0" text="Entrar">
                <font>
                   <Font name="Poppins Bold" size="23.0" />
                </font>

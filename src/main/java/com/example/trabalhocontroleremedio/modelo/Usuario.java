@@ -18,8 +18,7 @@ import javax.persistence.Table;
     @NamedQuery(name = "Usuario.findBySenha", query = "SELECT u FROM Usuario u WHERE u.senha = :senha"),
     @NamedQuery(name = "Usuario.findByTipo", query = "SELECT u FROM Usuario u WHERE u.tipo = :tipo"),
     @NamedQuery(name = "Usuario.findByNome", query = "SELECT u FROM Usuario u WHERE u.nome = :nome"),
-    @NamedQuery(name = "Usuario.findByTelefone", query = "SELECT u FROM Usuario u WHERE u.telefone = :telefone"),
-    @NamedQuery(name = "Usuario.findByLoginSenha", query = "SELECT u FROM Usuario u WHERE u.login = :login AND u.senha = :senha")})
+    @NamedQuery(name = "Usuario.findByTelefone", query = "SELECT u FROM Usuario u WHERE u.telefone = :telefone")})
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -120,7 +119,7 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "Usuário:\nMatrícula: " + matricula + "\nLogin: " + login + "\nNome: " + nome + "\nTelefone: " + telefone + "\nTipo: " + tipo;
+        return "Usuário:\nMatrícula: " + matricula + "\nLogin: " + login + "\nSenha: " + senha + "\nNome: " + nome + "\nTelefone: " + telefone + "\nTipo: " + tipo;
     }
     
 }

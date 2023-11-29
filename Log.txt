@@ -9,3 +9,5 @@ Login: admin
 Login: admin
 admin cadastrou usuário com matrícula: 1
 Login: admin
+Login: marcos
+Login: admin
