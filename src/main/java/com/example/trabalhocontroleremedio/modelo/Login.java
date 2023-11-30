@@ -14,7 +14,7 @@ public class Login {
         usuario.setLogin(Login.login);
         usuario.setSenha(Login.senha);
         try{
-            //usuario = jpa.buscarMatricula(usuario);
+            usuario = jpa.buscarMatricula(usuario);
             usuario.setLogin("admin");
             usuario.setSenha("admin");
             if(Login.login.equals(usuario.getLogin()) && Login.senha.equals(usuario.getSenha())){
