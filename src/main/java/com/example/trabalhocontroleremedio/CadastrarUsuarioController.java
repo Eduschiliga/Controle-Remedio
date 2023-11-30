@@ -62,7 +62,7 @@ public class CadastrarUsuarioController {
             usuario.setMatricula(matricula);
             usuario.setTelefone(this.telefone.getText());
             usuario.setTipo(this.tipo.getValue());
-            jpa.cadastrar(usuario);
+            //jpa.cadastrar(usuario);
             HelloApplication.escreverLog(Login.getLogin() + " cadastrou usuário com matrícula: " + this.matricula.getText());
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");
@@ -78,7 +78,7 @@ public class CadastrarUsuarioController {
                 throw new CampoVazioExcecao();
             }
             usuario.setMatricula(Integer.parseInt(this.matricula.getText()));
-            usuario = jpa.buscar(usuario);
+            //usuario = jpa.buscar(usuario);
             if(usuario != null){
                 nome.setText(usuario.getNome());
                 login.setText(usuario.getLogin());

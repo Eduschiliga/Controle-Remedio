@@ -102,7 +102,7 @@ public class PrincipalController {
     void initialize() {
         principal.setCenter(null);
         try {
-            fxmlUsuario = FXMLLoader.load(getClass().getResource("CadastrarUsuario.fxml"));
+            //fxmlUsuario = FXMLLoader.load(getClass().getResource("CadastrarUsuario.fxml"));
             fxmlIdoso = FXMLLoader.load(getClass().getResource("CadastrarIdoso.fxml"));
             fxmlRemedio = FXMLLoader.load(getClass().getResource("CadastrarRemedio.fxml"));
             fxmlRemedioIdoso = FXMLLoader.load(getClass().getResource("CadastrarRemedioIdoso.fxml"));
