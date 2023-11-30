@@ -12,11 +12,8 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarUsuarioController">
-    <top>
-        <VBox alignment="CENTER" prefHeight="40.0" prefWidth="800.0" styleClass="root" stylesheets="@Style.css" BorderPane.alignment="CENTER" />
-    </top>
     <center>
-        <VBox prefHeight="426.0" prefWidth="600.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
+        <VBox prefHeight="0.0" prefWidth="600.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
             <children>
                 <Label prefHeight="48.0" prefWidth="65.0" styleClass="label-modern" text="Login">
                     <font>
@@ -76,7 +73,7 @@
         </VBox>
     </center>
     <left>
-        <VBox prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+        <VBox prefHeight="0.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
     </left>
     <right>
         <VBox prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
@@ -119,4 +116,7 @@
             </children>
         </HBox>
     </bottom>
+   <top>
+      <VBox prefHeight="40.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </top>
 </BorderPane>

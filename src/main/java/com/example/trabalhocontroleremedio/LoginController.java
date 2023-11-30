@@ -1,6 +1,6 @@
 package com.example.trabalhocontroleremedio;
 
-import com.example.trabalhocontroleremedio.excecao.CampoVazioExcecao;
+//import com.example.trabalhocontroleremedio.excecao.CampoVazioExcecao;
 import com.example.trabalhocontroleremedio.modelo.Login;
 
 import javafx.event.ActionEvent;
@@ -32,7 +32,8 @@ public class LoginController {
         excecao.setVisible(false);
         try{
             if(login.getText().equals("") || senha.getText().equals("")){
-                throw new CampoVazioExcecao();
+                //throw new CampoVazioExcecao();
+                System.out.println("Ero");
             }
             Login.setLogin(login.getText());
             Login.setSenha(senha.getText());
@@ -43,10 +44,11 @@ public class LoginController {
             }else{
                 System.out.println("Usuário ou senha errados");
             }
-        }catch(CampoVazioExcecao CVE){
+        }catch(Exception ex){//CampoVazioExcecao CVE){
             excecao.setText("Campo Login ou Senha vazio!");
             excecao.setVisible(true);
-            System.out.println(CVE);
+            //System.out.println(CVE);
+            System.out.println(ex);
         }
     }
 

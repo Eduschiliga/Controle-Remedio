@@ -37,24 +37,27 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane fx:id="principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#alterarTela" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#telas" prefHeight="625.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.PrincipalController">
    <top>
       <MenuBar prefHeight="2.0" prefWidth="900.0" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="Principal F1" />
-            <Menu mnemonicParsing="false" text="Cadastrar F2">
+          <Menu mnemonicParsing="false" text="Principal">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#visualizar" text="Visualizar" />
+               </items></Menu>
+            <Menu fx:id="cadastrar" mnemonicParsing="false" text="Cadastrar">
               <items>
-                  <MenuItem mnemonicParsing="false" text="Usuário" />
-                <MenuItem mnemonicParsing="false" text="Idoso" />
-                  <MenuItem mnemonicParsing="false" text="Remédio" />
+                  <MenuItem mnemonicParsing="false" onAction="#cadastrarUsuario" text="Usuário" />
+                <MenuItem mnemonicParsing="false" onAction="#cadastrarIdoso" text="Idoso" />
+                  <MenuItem mnemonicParsing="false" onAction="#cadastrarRemedio" text="Remédio" />
               </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Vincular F3">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
-            </Menu>
-          <Menu mnemonicParsing="false" text="Ajuda F4" />
+            <Menu mnemonicParsing="false" text="Vincular">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#vincular" text="vincular" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Ajuda" />
+            <Menu mnemonicParsing="false" text="Sair" />
         </menus>
       </MenuBar>
    </top>
