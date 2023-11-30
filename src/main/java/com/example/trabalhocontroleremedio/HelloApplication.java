@@ -25,7 +25,7 @@ public class HelloApplication extends Application {
         Parent fxmlPrincipal = FXMLLoader.load(getClass().getResource("Principal.fxml"));
         principal = new Scene(fxmlPrincipal);
 
-        primaryStage.setScene(principal);
+        primaryStage.setScene(login);
         primaryStage.show();
     }
 
