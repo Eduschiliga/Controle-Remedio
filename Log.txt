@@ -15,3 +15,23 @@ Login: admin
 Login: admin
 Login: marcos
 Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+admin cadastrou usuário com matrícula: 69
+admin alterou usuário com matrícula: 69
+admin alterou usuário com matrícula: 69
+Login: admin
+Login: admin
+admin alterou usuário com matrícula: 69
+admin alterou usuário com matrícula: 69
+Login: ruhan
+ruhan excluiu usuário com matrícula: null
+Login: admin
+Login: admin
+Login: admin
+Login: admin

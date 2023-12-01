@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-/*package com.example.trabalhocontroleremedio.modelo;
+package com.example.trabalhocontroleremedio.modelo;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -19,14 +19,14 @@ import javax.persistence.Table;
  *
  * @author marco
  */
-/*@Entity
+@Entity
 @Table(name = "Remedio_Idoso")
 @NamedQueries({
-    @NamedQuery(name = "RemedioIdoso_1.findAll", query = "SELECT r FROM RemedioIdoso_1 r"),
-    @NamedQuery(name = "RemedioIdoso_1.findByIdRemedioIdoso", query = "SELECT r FROM RemedioIdoso_1 r WHERE r.idRemedioIdoso = :idRemedioIdoso"),
-    @NamedQuery(name = "RemedioIdoso_1.findByDosagem", query = "SELECT r FROM RemedioIdoso_1 r WHERE r.dosagem = :dosagem"),
-    @NamedQuery(name = "RemedioIdoso_1.findByFormaDosagem", query = "SELECT r FROM RemedioIdoso_1 r WHERE r.formaDosagem = :formaDosagem"),
-    @NamedQuery(name = "RemedioIdoso_1.findByQuantidadeDias", query = "SELECT r FROM RemedioIdoso_1 r WHERE r.quantidadeDias = :quantidadeDias")})
+    @NamedQuery(name = "RemedioIdoso.findAll", query = "SELECT r FROM RemedioIdoso r"),
+    @NamedQuery(name = "RemedioIdoso.findByIdRemedioIdoso", query = "SELECT r FROM RemedioIdoso r WHERE r.idRemedioIdoso = :idRemedioIdoso"),
+    @NamedQuery(name = "RemedioIdoso.findByDosagem", query = "SELECT r FROM RemedioIdoso r WHERE r.dosagem = :dosagem"),
+    @NamedQuery(name = "RemedioIdoso.findByFormaDosagem", query = "SELECT r FROM RemedioIdoso r WHERE r.formaDosagem = :formaDosagem"),
+    @NamedQuery(name = "RemedioIdoso.findByQuantidadeDias", query = "SELECT r FROM RemedioIdoso r WHERE r.quantidadeDias = :quantidadeDias")})
 public class RemedioIdoso implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -136,8 +136,7 @@ public class RemedioIdoso implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject3.RemedioIdoso_1[ idRemedioIdoso=" + idRemedioIdoso + " ]";
+        return "com.mycompany.mavenproject3.RemedioIdoso[ idRemedioIdoso=" + idRemedioIdoso + " ]";
     }
     
 }
-*/

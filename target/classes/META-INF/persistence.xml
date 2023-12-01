@@ -6,7 +6,7 @@
 
     <persistence-unit name="trabalho">
         <!--<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
-        <class>com.example.trabalhocontroleremedio.Usuario</class>
+        <!--<class>com.example.trabalhocontroleremedio.Usuario</class>-->
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />

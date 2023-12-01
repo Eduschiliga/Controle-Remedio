@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-/*package com.example.trabalhocontroleremedio.modelo;
+package com.example.trabalhocontroleremedio.modelo;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -19,14 +19,14 @@ import javax.persistence.Table;
  *
  * @author marco
  */
-/*@Entity
+@Entity
 @Table(name = "Remedio")
 @NamedQueries({
-    @NamedQuery(name = "Remedio_1.findAll", query = "SELECT r FROM Remedio_1 r"),
-    @NamedQuery(name = "Remedio_1.findByIdRemedio", query = "SELECT r FROM Remedio_1 r WHERE r.idRemedio = :idRemedio"),
-    @NamedQuery(name = "Remedio_1.findByNome", query = "SELECT r FROM Remedio_1 r WHERE r.nome = :nome"),
-    @NamedQuery(name = "Remedio_1.findByNomeGenerico", query = "SELECT r FROM Remedio_1 r WHERE r.nomeGenerico = :nomeGenerico"),
-    @NamedQuery(name = "Remedio_1.findByCategoria", query = "SELECT r FROM Remedio_1 r WHERE r.categoria = :categoria")})
+    @NamedQuery(name = "Remedio.findAll", query = "SELECT r FROM Remedio r"),
+    @NamedQuery(name = "Remedio.findByIdRemedio", query = "SELECT r FROM Remedio r WHERE r.idRemedio = :idRemedio"),
+    @NamedQuery(name = "Remedio.findByNome", query = "SELECT r FROM Remedio r WHERE r.nome = :nome"),
+    @NamedQuery(name = "Remedio.findByNomeGenerico", query = "SELECT r FROM Remedio r WHERE r.nomeGenerico = :nomeGenerico"),
+    @NamedQuery(name = "Remedio.findByCategoria", query = "SELECT r FROM Remedio r WHERE r.categoria = :categoria")})
 public class Remedio implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -99,7 +99,6 @@ public class Remedio implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Remedio)) {
             return false;
         }
@@ -112,8 +111,7 @@ public class Remedio implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject3.Remedio_1[ idRemedio=" + idRemedio + " ]";
+        return "com.mycompany.mavenproject3.Remedio[ idRemedio=" + idRemedio + " ]";
     }
     
 }
-*/

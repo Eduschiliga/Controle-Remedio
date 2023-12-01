@@ -23,8 +23,8 @@
                         <Insets />
                     </VBox.margin>
                 </Label>
-                <TextField fx:id="login" prefHeight="30.0" prefWidth="517.0" promptText="Login de usuário" styleClass="text-field-modern" stylesheets="@Style.css" />
-                <Label prefHeight="48.0" prefWidth="77.0" styleClass="label-modern" stylesheets="@Style.css" text="Senha">
+                <TextField fx:id="login" prefHeight="30.0" prefWidth="517.0" promptText="Login de usuário" styleClass="text-field-modern" />
+                <Label prefHeight="48.0" prefWidth="77.0" styleClass="label-modern" text="Senha">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -33,7 +33,7 @@
                     </VBox.margin>
                 </Label>
                 <PasswordField fx:id="senha" prefHeight="30.0" promptText="Senha do usuário" styleClass="text-field-modern" />
-                <Label prefHeight="27.0" prefWidth="145.0" styleClass="label-modern" stylesheets="@Style.css" text="Tipo de usuário">
+                <Label prefHeight="27.0" prefWidth="145.0" styleClass="label-modern" text="Tipo de usuário">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -42,7 +42,7 @@
                     </VBox.margin>
                 </Label>
                 <ChoiceBox fx:id="tipo" prefWidth="150.0" styleClass="choice-box-modern" />
-                <Label prefHeight="27.0" prefWidth="125.0" styleClass="label-modern" stylesheets="@Style.css" text="Nome">
+                <Label prefHeight="27.0" prefWidth="125.0" styleClass="label-modern" text="Nome">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -51,7 +51,7 @@
                     </VBox.margin>
                 </Label>
                 <TextField fx:id="nome" prefHeight="30.0" prefWidth="517.0" promptText="Nome do usuário" styleClass="text-field-modern" />
-                <Label prefHeight="48.0" prefWidth="86.0" styleClass="label-modern" stylesheets="@Style.css" text="Telefone">
+                <Label prefHeight="48.0" prefWidth="86.0" styleClass="label-modern" text="Telefone">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -60,7 +60,7 @@
                     </VBox.margin>
                 </Label>
                 <TextField fx:id="telefone" prefHeight="30.0" prefWidth="517.0" promptText="Telefone do usuário" styleClass="text-field-modern" />
-                <Label prefHeight="27.0" prefWidth="96.0" styleClass="label-modern" stylesheets="@Style.css" text="Matrícula">
+                <Label prefHeight="27.0" prefWidth="96.0" styleClass="label-modern" text="Matrícula">
                     <font>
                         <Font size="18.0" />
                     </font>

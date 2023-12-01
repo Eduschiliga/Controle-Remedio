@@ -94,30 +94,50 @@ public class CadastrarUsuarioController {
 
     @FXML
     void alterar(ActionEvent event) { // Altera usuário no banco
-        int matricula;
         try {
-            matricula = Integer.parseInt(this.matricula.getText());
+            if(matricula.getText().equals("") || senha.getText().equals("")){
+                throw new CampoVazioExcecao();
+            }
+            usuario.setMatricula(Integer.parseInt(matricula.getText()));
+            usuario = jpa.buscar(usuario);
+            if(usuario != null){
+                usuario.setLogin(login.getText());
+                usuario.setNome(nome.getText());
+                usuario.setSenha(senha.getText());
+                usuario.setTelefone(telefone.getText());
+                usuario.setTipo(tipo.getValue());
+                jpa.editar(usuario);
+            }
             HelloApplication.escreverLog(Login.getLogin() + " alterou usuário com matrícula: " + this.matricula.getText());
-            //this.user.alterarUsuario(this.login.getText(), this.senha.getText(), this.tipo.getValue(), this.nome.getText(), this.telefone.getText(), matricula);
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");
+        } catch(CampoVazioExcecao CVE){
+            System.out.println("Campo matrícula ou senha vazio!");
+        } catch(Exception ex){
+            System.out.println(ex);
         }
     }
 
     @FXML
     void excluir(ActionEvent event) { // Exclui um usuário no banco
-        int matricula;
         try {
-            matricula = Integer.parseInt(this.matricula.getText());
-            //this.user.excluirUsuario();
-            HelloApplication.escreverLog(Login.getLogin() + " excluiu usuário com matrícula: " + this.matricula.getText());
+            if(matricula.getText().equals("")){
+                throw new CampoVazioExcecao();
+            }
+            usuario.setMatricula(Integer.parseInt(this.matricula.getText()));
+            jpa.excluir(usuario);
             this.login.setText(null);
             this.tipo.setValue("Usuário");
             this.nome.setText(null);
             this.telefone.setText(null);
             this.matricula.setText(null);
+            HelloApplication.escreverLog(Login.getLogin() + " excluiu usuário com matrícula: " + this.matricula.getText());
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");
+        } catch(CampoVazioExcecao CVE){
+            System.out.println("A matricula está vazia!");
+        } catch(Exception ex){
+            System.out.println(ex);
         }
     }
 
