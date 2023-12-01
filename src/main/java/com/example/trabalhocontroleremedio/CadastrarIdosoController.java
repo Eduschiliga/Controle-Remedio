@@ -1,9 +1,12 @@
 package com.example.trabalhocontroleremedio;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
+import com.example.trabalhocontroleremedio.banco.IdosoDAO;
 import com.example.trabalhocontroleremedio.enumeracao.Sexo;
+import com.example.trabalhocontroleremedio.excecao.CampoVazioExcecao;
 import com.example.trabalhocontroleremedio.modelo.Idoso;
 import com.example.trabalhocontroleremedio.modelo.Login;
 
@@ -19,7 +22,7 @@ import javafx.scene.control.TextField;
 public class CadastrarIdosoController {
 
     private Idoso idoso;
-    //private IdosoDAO jpa;
+    private IdosoDAO jpa;
     private ObservableList<String> listaSexo;
 
     @FXML
@@ -56,15 +59,40 @@ public class CadastrarIdosoController {
 
     @FXML
     void buscar(ActionEvent event) {
-
+        try{
+            if(nome.getText().equals("")){
+                throw new CampoVazioExcecao();
+            }
+            idoso.setNome(nome.getText());
+            idoso = jpa.buscarNome(idoso);
+            if(idoso != null){
+                sexo.setValue(idoso.getSexo());
+                nascimento.setValue(LocalDate.parse(idoso.getNascimento()));
+            }
+        }catch(CampoVazioExcecao CVE){
+            System.out.println("Necessário fornecer um nome");
+        }
     }
 
     @FXML
     void cadastrar(ActionEvent event) {
-        idoso.setNome(nome.getText());
-        idoso.setNascimento(nascimento.getValue().toString());
-        System.out.println(nascimento.getValue());
-        HelloApplication.escreverLog(Login.getLogin() + " cadastrou idoso " + this.nome.getText());
+        try{
+            if(nome.getText().equals("") || nascimento.getValue().equals(null) || sexo.getValue().equals("")){
+                throw new CampoVazioExcecao();
+            }
+            idoso = jpa.buscarUltimoIdoso();
+            if(idoso != null){
+                idoso.setIdIdoso(idoso.getIdIdoso()+1);
+            }else{
+                idoso.setIdIdoso(1);
+            }
+            idoso.setNome(nome.getText());
+            idoso.setNascimento(nascimento.getValue().toString());
+            idoso.setSexo(sexo.getValue());
+            HelloApplication.escreverLog(Login.getLogin() + " cadastrou idoso " + this.nome.getText());
+        }catch(CampoVazioExcecao CVE){
+            System.out.println("Campos vazios!");
+        }
     }
 
     @FXML
@@ -81,6 +109,8 @@ public class CadastrarIdosoController {
         sexo.setItems(listaSexo);
         sexo.setValue("Masculino");
         idoso = new Idoso();
+        jpa = new IdosoDAO();
+        System.out.println(nascimento.getValue());
     }
 
 }
