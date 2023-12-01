@@ -58,7 +58,7 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="142.0" prefWidth="900.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" styleClass="button-cadastrar" text="CADASTRAR" textAlignment="CENTER">
+            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" style="-fx-pref-width: 200;" styleClass="button-cadastrar" text="CADASTRAR" textAlignment="CENTER">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
@@ -66,7 +66,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="alterar" alignment="CENTER" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" styleClass="button-alterar" text="ALTERAR" textAlignment="CENTER">
+            <Button fx:id="alterar" alignment="CENTER" mnemonicParsing="false" onAction="#alterar" prefHeight="50.0" prefWidth="150.0" style="-fx-pref-width: 200;" styleClass="button-alterar" text="ALTERAR" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="buscar" alignment="CENTER" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" styleClass="button-buscar" text="BUSCAR" textAlignment="CENTER">
+            <Button fx:id="buscar" alignment="CENTER" mnemonicParsing="false" onAction="#buscar" prefHeight="50.0" prefWidth="150.0" style="-fx-pref-width: 200;" styleClass="button-buscar" text="BUSCAR" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -82,7 +82,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="excluir" alignment="CENTER" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" styleClass="button-excluir" text="EXCLUIR" textAlignment="CENTER">
+            <Button fx:id="excluir" alignment="CENTER" mnemonicParsing="false" onAction="#excluir" prefHeight="50.0" prefWidth="150.0" style="-fx-pref-width: 200;" styleClass="button-excluir" text="EXCLUIR" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -94,12 +94,12 @@
       </HBox>
    </bottom>
    <left>
-      <Pane prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <Pane prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
    </right>
    <top>
-      <VBox alignment="CENTER" prefHeight="92.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+      <VBox alignment="CENTER" prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </top>
 </BorderPane>

@@ -16,26 +16,23 @@
 
 <BorderPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.CadastrarRemedioIdosoController">
    <center>
-      <VBox prefHeight="486.0" prefWidth="700.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
+      <VBox prefHeight="473.0" prefWidth="599.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
-            <Label styleClass="label-modern" text="Nome Idoso">
+            <Label styleClass="label-modern" text="Idoso">
                <VBox.margin>
-                  <Insets top="20.0" />
+                  <Insets top="30.0" />
                </VBox.margin></Label>
-            <TextField fx:id="idoso" promptText="Nome do idoso" styleClass="text-field-modern" />
-            <Label styleClass="label-modern" text="Nome Remédio" />
-            <TextField fx:id="remedio" promptText="Nome do remédio" styleClass="text-field-modern" />
+            <TextField fx:id="idoso" promptText="Informe o nome do idoso" styleClass="text-field-modern" />
+            <Label styleClass="label-modern" text="Remédio" />
+            <TextField fx:id="remedio" promptText="Informe o nome do remédio" styleClass="text-field-modern" />
             <Label styleClass="label-modern" text="Dosagem" />
             <TextField fx:id="dosagem" promptText="Dosagem do remédio" styleClass="text-field-modern" />
             <Label styleClass="label-modern" text="Quantidade de Dias" />
-            <TextField fx:id="dias" promptText="Número de dias" styleClass="text-field-modern" />
-            <Label styleClass="label-modern" text="Quantidade de vezes por dia" />
-            <Spinner fx:id="vezesDia" prefWidth="250.0" styleClass="spinner-modern">
+            <Spinner fx:id="dias" />
+            <Label styleClass="label-modern" text="Planilha de horários">
                <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </Spinner>
-            <Label styleClass="label-modern" text="Planilha de horários" />
+                  <Insets top="15.0" />
+               </VBox.margin></Label>
             <GridPane prefHeight="191.0" prefWidth="700.0" styleClass="grid-pane-modern">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -157,33 +154,36 @@
       </VBox>
    </center>
    <left>
-      <Pane prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <Pane prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="484.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="900.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="104.0" prefWidth="900.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="cadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="40.0" prefWidth="150.0" styleClass="button-cadastrar" text="CADASTRAR">
+            <Button fx:id="cadastrar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="40.0" prefWidth="150.0" style="-fx-pref-width: 200;" styleClass="button-cadastrar" text="CADASTRAR" textAlignment="CENTER">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="editar" mnemonicParsing="false" onAction="#editar" prefHeight="40.0" prefWidth="150.0" styleClass="button-alterar" text="EDITAR">
+            <Button fx:id="editar" mnemonicParsing="false" onAction="#editar" prefHeight="40.0" prefWidth="150.0" style="-fx-pref-width: 200;" styleClass="button-alterar" text="EDITAR">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="buscar" mnemonicParsing="false" onAction="#buscar" prefHeight="40.0" prefWidth="150.0" styleClass="button-buscar" text="BUSCAR">
+            <Button fx:id="buscar" mnemonicParsing="false" onAction="#buscar" prefHeight="40.0" prefWidth="150.0" style="-fx-pref-width: 200;" styleClass="button-buscar" text="BUSCAR">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="excluir" mnemonicParsing="false" onAction="#excluir" prefHeight="40.0" prefWidth="150.0" styleClass="button-excluir" text="EXCLUIR">
+            <Button fx:id="excluir" mnemonicParsing="false" onAction="#excluir" prefHeight="40.0" prefWidth="150.0" style="-fx-pref-width: 200;" styleClass="button-excluir" text="EXCLUIR">
                <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="5.0" left="5.0" right="100.0" top="5.0" />
                </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </Button>
          </children>
          <padding>
