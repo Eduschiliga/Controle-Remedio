@@ -54,7 +54,20 @@ public class CadastrarIdosoController {
 
     @FXML
     void alterar(ActionEvent event) {
-        HelloApplication.escreverLog(Login.getLogin() + " alterou idoso " + this.nome.getText());
+        try{
+            if(nome.getText().equals("")){
+                throw new CampoVazioExcecao();
+            }
+            idoso.setNome(nome.getText());
+            idoso.setNascimento(nascimento.getValue().toString());
+            idoso.setSexo(sexo.getValue());
+            jpa.editar(idoso);
+            HelloApplication.escreverLog(Login.getLogin() + " alterou idoso " + this.nome.getText());
+        }catch(CampoVazioExcecao CVE){
+            System.out.println("Necessário fornecer um nome!");
+        }catch(Exception ex){
+            System.out.println(ex);
+        }
     }
 
     @FXML
@@ -63,6 +76,7 @@ public class CadastrarIdosoController {
             if(nome.getText().equals("")){
                 throw new CampoVazioExcecao();
             }
+            idoso = new Idoso();
             idoso.setNome(nome.getText());
             idoso = jpa.buscarNome(idoso);
             if(idoso != null){
@@ -71,33 +85,56 @@ public class CadastrarIdosoController {
             }
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome");
+        }catch(NullPointerException NPE){
+            System.out.println(NPE);
         }
     }
 
     @FXML
     void cadastrar(ActionEvent event) {
         try{
-            if(nome.getText().equals("") || nascimento.getValue().equals(null) || sexo.getValue().equals("")){
+            if(nome.getText().equals("") || nascimento.getValue().equals(null)){
                 throw new CampoVazioExcecao();
             }
-            idoso = jpa.buscarUltimoIdoso();
-            if(idoso != null){
-                idoso.setIdIdoso(idoso.getIdIdoso()+1);
-            }else{
-                idoso.setIdIdoso(1);
+            idoso = new Idoso();
+            int totalIdoso = 0;
+            for (Idoso idoso : jpa.buscarTodos()) {
+                if(idoso != null){
+                    totalIdoso = idoso.getIdIdoso();
+                }
             }
+            idoso.setIdIdoso(totalIdoso+1);
             idoso.setNome(nome.getText());
             idoso.setNascimento(nascimento.getValue().toString());
             idoso.setSexo(sexo.getValue());
+            jpa.cadastrar(idoso);
             HelloApplication.escreverLog(Login.getLogin() + " cadastrou idoso " + this.nome.getText());
         }catch(CampoVazioExcecao CVE){
             System.out.println("Campos vazios!");
+        }catch(Exception ex){
+            System.out.println(ex);
         }
     }
 
     @FXML
     void excluir(ActionEvent event) {
-        HelloApplication.escreverLog(Login.getLogin() + " excluiu idoso " + this.nome.getText());
+        try{
+            if(nome.getText().equals("")){
+                throw new CampoVazioExcecao();
+            }
+            idoso = new Idoso();
+            idoso.setNome(nome.getText());
+            idoso = jpa.buscarNome(idoso);
+            jpa.excluir(idoso);
+            nome.setText("");
+            sexo.setValue("Masculino");
+            nascimento.setValue(null);
+            HelloApplication.escreverLog(Login.getLogin() + " excluiu idoso " + this.nome.getText());
+        }catch(CampoVazioExcecao CVE){
+            System.out.println("Necessário nome para exclusão!");
+        }catch(Exception ex){
+            System.out.println(ex);
+        }
     }
 
     @FXML
@@ -108,9 +145,7 @@ public class CadastrarIdosoController {
         }
         sexo.setItems(listaSexo);
         sexo.setValue("Masculino");
-        idoso = new Idoso();
         jpa = new IdosoDAO();
-        System.out.println(nascimento.getValue());
     }
 
 }

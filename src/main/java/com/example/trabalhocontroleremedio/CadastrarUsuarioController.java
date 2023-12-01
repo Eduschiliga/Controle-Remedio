@@ -56,6 +56,7 @@ public class CadastrarUsuarioController {
     void cadastrar(ActionEvent event) { // Cadastra usuário no banco
         int matricula;
         try {
+            usuario = new Usuario();
             matricula = Integer.parseInt(this.matricula.getText());
             usuario.setLogin(this.login.getText());
             usuario.setNome(this.nome.getText());
@@ -78,6 +79,7 @@ public class CadastrarUsuarioController {
             if(matricula.getText().equals("")){
                 throw new CampoVazioExcecao();
             }
+            usuario = new Usuario();
             usuario.setMatricula(Integer.parseInt(this.matricula.getText()));
             usuario = jpa.buscar(usuario);
             if(usuario != null){
@@ -90,6 +92,8 @@ public class CadastrarUsuarioController {
             System.out.println("Campo matrícula vazio!");
         }catch(NumberFormatException NFE){
             System.out.println("Necessário utilizar apenas números na matricula!");
+        }catch(NullPointerException NPE){
+            usuario = new Usuario();
         }
     }
 
@@ -99,6 +103,7 @@ public class CadastrarUsuarioController {
             if(matricula.getText().equals("") || senha.getText().equals("")){
                 throw new CampoVazioExcecao();
             }
+            usuario = new Usuario();
             usuario.setMatricula(Integer.parseInt(matricula.getText()));
             usuario = jpa.buscar(usuario);
             if(usuario != null){
@@ -125,6 +130,7 @@ public class CadastrarUsuarioController {
             if(matricula.getText().equals("")){
                 throw new CampoVazioExcecao();
             }
+            usuario = new Usuario();
             usuario.setMatricula(Integer.parseInt(this.matricula.getText()));
             jpa.excluir(usuario);
             this.login.setText(null);
@@ -150,7 +156,6 @@ public class CadastrarUsuarioController {
         }
         tipo.setItems(listaTipo);
         tipo.setValue("Usuário");
-        usuario = new Usuario();
         jpa = new UsuarioDAO();
     }
 

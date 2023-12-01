@@ -38,8 +38,4 @@ public class IdosoDAO extends AbstrataDAO<IdosoJPAController, Idoso>{
     public Idoso buscarNome(Idoso objeto){
         return objetoJPA.encontrarIdosoNome(objeto.getNome());
     }
-
-    public Idoso buscarUltimoIdoso(){
-        return objetoJPA.encontrarUltimoIdoso();
-    }
 }

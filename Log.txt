@@ -48,3 +48,34 @@ Login: admin
 Login: admin
 Login: admin
 admin cadastrou idoso 
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+admin alterou idoso 
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+admin cadastrou idoso Adão
+Login: admin
+admin cadastrou idoso Mario
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+admin excluiu idoso 
+Login: admin
+Login: admin
+admin cadastrou idoso Marcos
+admin cadastrou idoso Joçao
+admin cadastrou idoso João
+Login: admin
+admin alterou idoso João da Silva Sauro

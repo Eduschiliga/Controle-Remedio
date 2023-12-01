@@ -85,7 +85,7 @@ public class IdosoJPAController implements Serializable{
                 idoso = em.getReference(Idoso.class, idIdoso);
                 idoso.getIdIdoso();
             }catch(EntityNotFoundException enfe){
-                throw new Exception("O idoso com matricula " + idIdoso + " não existe.",enfe);
+                throw new Exception("O idoso com idIdoso " + idIdoso + " não existe.",enfe);
             }
             em.remove(idoso);
             em.getTransaction().commit();
@@ -125,19 +125,7 @@ public class IdosoJPAController implements Serializable{
         try{
             return em.createQuery("SELECT i FROM Idoso i WHERE i.nome = :nome", Idoso.class).setParameter("nome", nome).getSingleResult();
         }catch(NoResultException NRE){
-            System.out.println("Usuário não encontrado");
-            return null;
-        }finally{
-            em.close();
-        }
-    }
-
-    public Idoso encontrarUltimoIdoso(){
-        EntityManager em = getEntityManager();
-        try{
-            return em.createQuery("SELECT MAX(i) FROM Idoso i", Idoso.class).getSingleResult();
-        }catch(NoResultException NRE){
-            System.out.println("Nenhum idoso encontrado!");
+            System.out.println("Idoso não encontrado");
             return null;
         }finally{
             em.close();
