@@ -4,16 +4,17 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.trabalhocontroleremedio.modelo.Login;
-//import com.example.trabalhocontroleremedio.modelo.Remedio;
+import com.example.trabalhocontroleremedio.modelo.Remedio;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
 public class CadastrarRemedioController {
 
-    //private Remedio remedio;
+    private Remedio remedio;
 
     @FXML
     private ResourceBundle resources;
@@ -37,10 +38,7 @@ public class CadastrarRemedioController {
     private TextField categoria;
 
     @FXML
-    private TextField dosagem;
-
-    @FXML
-    private TextField formaDosagem;
+    private ChoiceBox<?> formaDosagem;
 
     @FXML
     private TextField nome;
@@ -50,9 +48,9 @@ public class CadastrarRemedioController {
 
     @FXML
     void alterar(ActionEvent event) { // Faz a alteração dos dados do remédio no banco
-        int dosagem;
+        //int dosagem;
         try {
-            dosagem = Integer.parseInt(this.dosagem.getText());
+            //dosagem = Integer.parseInt(this.dosagem.getText());
             //this.remedio.alterarRemedio(this.nome.getText(), this.nomeGenerico.getText(), this.categoria.getText(), dosagem, this.formaDosagem.getText());
             HelloApplication.escreverLog(Login.getLogin() + " alterou " + this.nome.getText());
         } catch (NumberFormatException NFE) {
@@ -72,9 +70,9 @@ public class CadastrarRemedioController {
     @FXML
     void cadastrar(ActionEvent event) { // Cadastra o remédio no banco
         //this.remedio = new Remedio();
-        int dosagem;
+        //int dosagem;
         try {
-            dosagem = Integer.parseInt(this.dosagem.getText());
+            //dosagem = Integer.parseInt(this.dosagem.getText());
             //this.remedio.alterarRemedio(this.nome.getText(), this.nomeGenerico.getText(), this.categoria.getText(), dosagem, this.formaDosagem.getText());
             HelloApplication.escreverLog(Login.getLogin() + " cadastrou " + this.nome.getText());
         } catch (NumberFormatException NFE) {
@@ -88,8 +86,8 @@ public class CadastrarRemedioController {
         this.nome.setText(null);
         this.nomeGenerico.setText(null);
         this.categoria.setText(null);
-        this.dosagem.setText(null);
-        this.formaDosagem.setText(null);
+        //this.dosagem.setText(null);
+        //this.formaDosagem.setText(null);
         HelloApplication.escreverLog(Login.getLogin() + " excluiu " + this.nome.getText());
     }
 

@@ -14,19 +14,13 @@ import javafx.scene.control.TextField;
 public class CadastrarRemedioIdosoController {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private Button buscar;
 
     @FXML
     private Button cadastrar;
 
     @FXML
-    private TextField dias;
+    private Spinner<?> dias;
 
     @FXML
     private TextField dosagem;
@@ -42,9 +36,6 @@ public class CadastrarRemedioIdosoController {
 
     @FXML
     private TextField remedio;
-
-    @FXML
-    private Spinner<?> vezesDia;
 
     @FXML
     void buscar(ActionEvent event) {
@@ -76,8 +67,6 @@ public class CadastrarRemedioIdosoController {
         assert excluir != null : "fx:id=\"excluir\" was not injected: check your FXML file 'CadastrarRemedioIdoso.fxml'.";
         assert idoso != null : "fx:id=\"idoso\" was not injected: check your FXML file 'CadastrarRemedioIdoso.fxml'.";
         assert remedio != null : "fx:id=\"remedio\" was not injected: check your FXML file 'CadastrarRemedioIdoso.fxml'.";
-        assert vezesDia != null : "fx:id=\"vezesDia\" was not injected: check your FXML file 'CadastrarRemedioIdoso.fxml'.";
-
     }
 
 }
