@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.collections.ObservableList;
 
 import com.example.trabalhocontroleremedio.banco.UsuarioDAO;
+import com.example.trabalhocontroleremedio.enumeracao.Tipo;
 import com.example.trabalhocontroleremedio.excecao.CampoVazioExcecao;
 import com.example.trabalhocontroleremedio.modelo.Login;
 import com.example.trabalhocontroleremedio.modelo.Usuario;
@@ -143,7 +144,10 @@ public class CadastrarUsuarioController {
 
     @FXML
     void initialize() {
-        listaTipo = FXCollections.observableArrayList("Usuário", "Administrador");
+        listaTipo = FXCollections.observableArrayList();
+        for(Tipo listaTipo: Tipo.values()){
+            this.listaTipo.add(listaTipo.getTipo());
+        }
         tipo.setItems(listaTipo);
         tipo.setValue("Usuário");
         usuario = new Usuario();

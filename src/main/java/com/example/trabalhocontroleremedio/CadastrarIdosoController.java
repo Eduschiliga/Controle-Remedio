@@ -3,16 +3,24 @@ package com.example.trabalhocontroleremedio;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.example.trabalhocontroleremedio.enumeracao.Sexo;
+import com.example.trabalhocontroleremedio.modelo.Idoso;
 import com.example.trabalhocontroleremedio.modelo.Login;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 public class CadastrarIdosoController {
+
+    private Idoso idoso;
+    //private IdosoDAO jpa;
+    private ObservableList<String> listaSexo;
 
     @FXML
     private ResourceBundle resources;
@@ -39,7 +47,7 @@ public class CadastrarIdosoController {
     private TextField nome;
 
     @FXML
-    private ComboBox<?> sexo;
+    private ChoiceBox<String> sexo;
 
     @FXML
     void alterar(ActionEvent event) {
@@ -53,6 +61,8 @@ public class CadastrarIdosoController {
 
     @FXML
     void cadastrar(ActionEvent event) {
+        idoso.setNome(nome.getText());
+        idoso.setNascimento(nascimento.getValue().toString());
         System.out.println(nascimento.getValue());
         HelloApplication.escreverLog(Login.getLogin() + " cadastrou idoso " + this.nome.getText());
     }
@@ -64,14 +74,13 @@ public class CadastrarIdosoController {
 
     @FXML
     void initialize() {
-        assert alterar != null : "fx:id=\"alterar\" was not injected: check your FXML file 'CadastrarIdoso.fxml'.";
-        assert buscar != null : "fx:id=\"buscar\" was not injected: check your FXML file 'CadastrarIdoso.fxml'.";
-        assert cadastrar != null : "fx:id=\"cadastrar\" was not injected: check your FXML file 'CadastrarIdoso.fxml'.";
-        assert excluir != null : "fx:id=\"excluir\" was not injected: check your FXML file 'CadastrarIdoso.fxml'.";
-        assert nascimento != null : "fx:id=\"nascimento\" was not injected: check your FXML file 'CadastrarIdoso.fxml'.";
-        assert nome != null : "fx:id=\"nome\" was not injected: check your FXML file 'CadastrarIdoso.fxml'.";
-        assert sexo != null : "fx:id=\"sexo\" was not injected: check your FXML file 'CadastrarIdoso.fxml'.";
-
+        listaSexo = FXCollections.observableArrayList();
+        for(Sexo listaSexo: Sexo.values()){
+            this.listaSexo.add(listaSexo.getSexo());
+        }
+        sexo.setItems(listaSexo);
+        sexo.setValue("Masculino");
+        idoso = new Idoso();
     }
 
 }
