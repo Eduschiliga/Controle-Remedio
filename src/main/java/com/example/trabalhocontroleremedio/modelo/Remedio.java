@@ -40,6 +40,8 @@ public class Remedio implements Serializable {
     private String nomeGenerico;
     @Column(name = "categoria")
     private String categoria;
+    @Column(name = "forma_dosagem")
+    private String formaDosagem;
     @OneToMany(mappedBy = "fkRemedio")
     private Collection<RemedioIdoso> remedioIdosoCollection;
 
@@ -82,6 +84,14 @@ public class Remedio implements Serializable {
         this.categoria = categoria;
     }
 
+    public void setFormaDosagem(String formaDosagem){
+        this.formaDosagem = formaDosagem;
+    }
+
+    public String getFormaDosagem(){
+        return formaDosagem;
+    }
+
     public Collection<RemedioIdoso> getRemedioIdosoCollection() {
         return remedioIdosoCollection;
     }
@@ -111,7 +121,7 @@ public class Remedio implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject3.Remedio[ idRemedio=" + idRemedio + " ]";
+        return "[ idRemedio=" + idRemedio + " ]";
     }
     
 }

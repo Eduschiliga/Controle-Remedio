@@ -343,7 +343,7 @@ public class Horario implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject3.Horario[ idHorario=" + idHorario + " ]";
+        return "[ idHorario=" + idHorario + " ]";
     }
     
 }

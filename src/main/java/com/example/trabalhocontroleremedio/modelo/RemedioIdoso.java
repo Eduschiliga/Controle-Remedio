@@ -136,7 +136,7 @@ public class RemedioIdoso implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.mavenproject3.RemedioIdoso[ idRemedioIdoso=" + idRemedioIdoso + " ]";
+        return "[ idRemedioIdoso=" + idRemedioIdoso + " ]";
     }
     
 }
