@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -57,8 +58,23 @@
                   <MenuItem mnemonicParsing="false" onAction="#vincular" text="vincular" />
                </items></Menu>
           <Menu mnemonicParsing="false" text="Ajuda" />
-            <Menu mnemonicParsing="false" text="Sair" />
+            <Menu mnemonicParsing="false" text="Sair">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#deslogar" text="Deslogar" />
+               </items></Menu>
         </menus>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#visualizar" text="Visualizar" />
+                  <MenuItem mnemonicParsing="false" onAction="#cadastrarUsuario" text="Cadastrar  Usuário" />
+                  <MenuItem mnemonicParsing="false" onAction="#cadastrarIdoso" text="Cadastrar Idoso" />
+                  <MenuItem mnemonicParsing="false" onAction="#cadastrarRemedio" text="Cadastrar Remédio" />
+                  <MenuItem mnemonicParsing="false" onAction="#vincular" text="Vincular Idoso Remédio" />
+                  <MenuItem mnemonicParsing="false" onAction="#deslogar" text="Deslogar" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
       </MenuBar>
    </top>
 </BorderPane>

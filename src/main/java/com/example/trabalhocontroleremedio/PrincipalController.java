@@ -53,6 +53,10 @@ public class PrincipalController {
         setTela("RemedioIdoso");
     }
 
+    @FXML
+    void deslogar(ActionEvent event) {
+        HelloApplication.trocarTela("Login");
+    }
 
     @FXML
     void telas(KeyEvent event) {
@@ -72,7 +76,7 @@ public class PrincipalController {
             vincular(null);
         }
         if(event.getCode() == KeyCode.ESCAPE){
-            HelloApplication.trocarTela("Login");
+            deslogar(null);
         }
     }
 
