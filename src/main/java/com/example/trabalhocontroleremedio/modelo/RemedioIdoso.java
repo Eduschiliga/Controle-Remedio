@@ -25,7 +25,6 @@ import javax.persistence.Table;
     @NamedQuery(name = "RemedioIdoso.findAll", query = "SELECT r FROM RemedioIdoso r"),
     @NamedQuery(name = "RemedioIdoso.findByIdRemedioIdoso", query = "SELECT r FROM RemedioIdoso r WHERE r.idRemedioIdoso = :idRemedioIdoso"),
     @NamedQuery(name = "RemedioIdoso.findByDosagem", query = "SELECT r FROM RemedioIdoso r WHERE r.dosagem = :dosagem"),
-    @NamedQuery(name = "RemedioIdoso.findByFormaDosagem", query = "SELECT r FROM RemedioIdoso r WHERE r.formaDosagem = :formaDosagem"),
     @NamedQuery(name = "RemedioIdoso.findByQuantidadeDias", query = "SELECT r FROM RemedioIdoso r WHERE r.quantidadeDias = :quantidadeDias")})
 public class RemedioIdoso implements Serializable {
 
@@ -37,8 +36,6 @@ public class RemedioIdoso implements Serializable {
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "dosagem")
     private Float dosagem;
-    @Column(name = "forma_dosagem")
-    private String formaDosagem;
     @Column(name = "quantidade_dias")
     private Integer quantidadeDias;
     @JoinColumn(name = "fk_idoso", referencedColumnName = "idIdoso")
@@ -72,14 +69,6 @@ public class RemedioIdoso implements Serializable {
 
     public void setDosagem(Float dosagem) {
         this.dosagem = dosagem;
-    }
-
-    public String getFormaDosagem() {
-        return formaDosagem;
-    }
-
-    public void setFormaDosagem(String formaDosagem) {
-        this.formaDosagem = formaDosagem;
     }
 
     public Integer getQuantidadeDias() {

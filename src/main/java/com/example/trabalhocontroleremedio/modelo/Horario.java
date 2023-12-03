@@ -23,7 +23,7 @@ import javax.persistence.Table;
 @Table(name = "horario")
 @NamedQueries({
     @NamedQuery(name = "Horario.findAll", query = "SELECT h FROM Horario h"),
-    @NamedQuery(name = "Horario.findByIdHorario", query = "SELECT h FROM Horario h WHERE h.idHorario = :idHorario"),
+    @NamedQuery(name = "Horario.findByIdHorario", query = "SELECT h FROM Horario h WHERE h.idhorario = :idhorario"),
     @NamedQuery(name = "Horario.findByH1", query = "SELECT h FROM Horario h WHERE h.h1 = :h1"),
     @NamedQuery(name = "Horario.findByH2", query = "SELECT h FROM Horario h WHERE h.h2 = :h2"),
     @NamedQuery(name = "Horario.findByH3", query = "SELECT h FROM Horario h WHERE h.h3 = :h3"),
@@ -53,8 +53,8 @@ public class Horario implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @Column(name = "idHorario")
-    private Integer idHorario;
+    @Column(name = "idhorario")
+    private Integer idhorario;
     @Column(name = "h1")
     private Boolean h1;
     @Column(name = "h2")
@@ -110,15 +110,15 @@ public class Horario implements Serializable {
     }
 
     public Horario(Integer idHorario) {
-        this.idHorario = idHorario;
+        this.idhorario = idHorario;
     }
 
-    public Integer getIdHorario() {
-        return idHorario;
+    public Integer getIdhorario() {
+        return idhorario;
     }
 
     public void setIdHorario(Integer idHorario) {
-        this.idHorario = idHorario;
+        this.idhorario = idHorario;
     }
 
     public Boolean getH1() {
@@ -324,7 +324,7 @@ public class Horario implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idHorario != null ? idHorario.hashCode() : 0);
+        hash += (idhorario != null ? idhorario.hashCode() : 0);
         return hash;
     }
 
@@ -335,7 +335,7 @@ public class Horario implements Serializable {
             return false;
         }
         Horario other = (Horario) object;
-        if ((this.idHorario == null && other.idHorario != null) || (this.idHorario != null && !this.idHorario.equals(other.idHorario))) {
+        if ((this.idhorario == null && other.idhorario != null) || (this.idhorario != null && !this.idhorario.equals(other.idhorario))) {
             return false;
         }
         return true;
@@ -343,7 +343,7 @@ public class Horario implements Serializable {
 
     @Override
     public String toString() {
-        return "[ idHorario=" + idHorario + " ]";
+        return "[ idHorario=" + idhorario + " ]";
     }
     
 }
