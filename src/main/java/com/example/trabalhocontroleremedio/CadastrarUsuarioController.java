@@ -133,11 +133,11 @@ public class CadastrarUsuarioController {
             usuario = new Usuario();
             usuario.setMatricula(Integer.parseInt(this.matricula.getText()));
             jpa.excluir(usuario);
-            this.login.setText(null);
+            this.login.setText("");
             this.tipo.setValue("Usuário");
-            this.nome.setText(null);
-            this.telefone.setText(null);
-            this.matricula.setText(null);
+            this.nome.setText("");
+            this.telefone.setText("");
+            this.matricula.setText("");
             HelloApplication.escreverLog(Login.getLogin() + " excluiu usuário com matrícula: " + this.matricula.getText());
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");

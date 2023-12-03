@@ -71,6 +71,9 @@ public class PrincipalController {
         if(event.getCode() == KeyCode.F5){
             vincular(null);
         }
+        if(event.getCode() == KeyCode.ESCAPE){
+            HelloApplication.trocarTela("Login");
+        }
     }
 
     private void setTela(String tela){

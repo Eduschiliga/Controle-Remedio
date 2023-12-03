@@ -312,10 +312,10 @@ public class CadastrarRemedioIdosoController {
             horarioM = new Horario(remedioIdosoM.getFkHorario().getIdhorario());
             jpaRemedioIdoso.excluir(remedioIdosoM);
             jpaHorario.excluir(horarioM);
-            idoso.setText(null);
-            dosagem.setText(null);
-            remedio.setText(null);
-            dias.setText(null);
+            idoso.setText("");
+            dosagem.setText("");
+            remedio.setText("");
+            dias.setText("");
             h1.setSelected(false);
             h2.setSelected(false);
             h3.setSelected(false);

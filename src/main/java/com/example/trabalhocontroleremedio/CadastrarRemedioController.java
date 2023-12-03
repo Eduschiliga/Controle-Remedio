@@ -132,9 +132,9 @@ public class CadastrarRemedioController {
             remedio.setNome(nome.getText());
             remedio = jpa.buscarNome(remedio);
             jpa.excluir(remedio);
-            this.nome.setText(null);
-            this.nomeGenerico.setText(null);
-            this.categoria.setText(null);
+            this.nome.setText("");
+            this.nomeGenerico.setText("");
+            this.categoria.setText("");
             HelloApplication.escreverLog(Login.getLogin() + " excluiu " + this.nome.getText());
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome!");
