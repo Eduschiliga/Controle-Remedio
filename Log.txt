@@ -130,3 +130,10 @@ Login: admin
 Login: admin
 Login: admin
 admin cadastrou remédio idoso
+Login: admin
+Login: admin
+admin excluiu remédio idoso
+Login: admin
+admin cadastrou remédio idoso
+admin editou remédio idoso
+admin excluiu remédio idoso

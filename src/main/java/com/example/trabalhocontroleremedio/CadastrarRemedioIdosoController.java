@@ -169,6 +169,8 @@ public class CadastrarRemedioIdosoController {
             }
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome!");
+        }catch(NullPointerException NPE){
+            System.out.println("Sem ocorrência do Idoso solicitado!");
         }
     }
 
@@ -245,12 +247,105 @@ public class CadastrarRemedioIdosoController {
 
     @FXML
     void editar(ActionEvent event) {
-        HelloApplication.escreverLog(Login.getLogin() + " editou remédio idoso");
+        try{
+            if(idoso.getText().equals("") || remedio.getText().equals("")){
+                throw new CampoVazioExcecao();
+            }
+            idosoM = new Idoso();
+            remedioM = new Remedio();
+            horarioM = new Horario();
+            remedioIdosoM = new RemedioIdoso();
+            idosoM.setNome(idoso.getText());
+            idosoM = jpaIdoso.buscarNome(idosoM);
+            remedioM.setNome(remedio.getText());
+            remedioM = jpaRemedio.buscarNome(remedioM);
+            if(idosoM != null && remedioM != null){
+                remedioIdosoM = jpaRemedioIdoso.buscarRemedioIdosoNome(idosoM.getNome());
+                remedioIdosoM.setDosagem(Float.parseFloat(dosagem.getText()));
+                remedioIdosoM.setFkRemedio(remedioM);
+                remedioIdosoM.setQuantidadeDias(Integer.parseInt(dias.getText()));
+
+                horarioM.setIdHorario(remedioIdosoM.getFkHorario().getIdhorario());
+                horarioM.setH1(h1.isSelected());
+                horarioM.setH2(h2.isSelected());
+                horarioM.setH3(h3.isSelected());
+                horarioM.setH4(h4.isSelected());
+                horarioM.setH5(h5.isSelected());
+                horarioM.setH6(h6.isSelected());
+                horarioM.setH7(h7.isSelected());
+                horarioM.setH8(h8.isSelected());
+                horarioM.setH9(h9.isSelected());
+                horarioM.setH10(h10.isSelected());
+                horarioM.setH11(h11.isSelected());
+                horarioM.setH12(h12.isSelected());
+                horarioM.setH13(h13.isSelected());
+                horarioM.setH14(h14.isSelected());
+                horarioM.setH15(h15.isSelected());
+                horarioM.setH16(h16.isSelected());
+                horarioM.setH17(h17.isSelected());
+                horarioM.setH18(h18.isSelected());
+                horarioM.setH19(h19.isSelected());
+                horarioM.setH20(h20.isSelected());
+                horarioM.setH21(h21.isSelected());
+                horarioM.setH22(h22.isSelected());
+                horarioM.setH23(h23.isSelected());
+                horarioM.setH24(h24.isSelected());
+                jpaHorario.editar(horarioM);
+
+                jpaRemedioIdoso.editar(remedioIdosoM);
+
+                HelloApplication.escreverLog(Login.getLogin() + " editou remédio idoso");
+            }
+        }catch(CampoVazioExcecao CVE){
+            System.out.println("Necessário fornecer nome de Idoso e Remédio!");
+        }catch(Exception Ex){
+            System.out.println(Ex);
+        }  
     }
 
     @FXML
     void excluir(ActionEvent event) {
-        HelloApplication.escreverLog(Login.getLogin() + " excluiu remédio idoso");
+        try{
+            if(idoso.getText().equals("")){
+                throw new CampoVazioExcecao();
+            }
+            horarioM = new Horario(remedioIdosoM.getFkHorario().getIdhorario());
+            jpaRemedioIdoso.excluir(remedioIdosoM);
+            jpaHorario.excluir(horarioM);
+            idoso.setText(null);
+            dosagem.setText(null);
+            remedio.setText(null);
+            dias.setText(null);
+            h1.setSelected(false);
+            h2.setSelected(false);
+            h3.setSelected(false);
+            h4.setSelected(false);
+            h5.setSelected(false);
+            h6.setSelected(false);
+            h7.setSelected(false);
+            h8.setSelected(false);
+            h9.setSelected(false);
+            h10.setSelected(false);
+            h11.setSelected(false);
+            h12.setSelected(false);
+            h13.setSelected(false);
+            h14.setSelected(false);
+            h15.setSelected(false);
+            h16.setSelected(false);
+            h17.setSelected(false);
+            h18.setSelected(false);
+            h19.setSelected(false);
+            h20.setSelected(false);
+            h21.setSelected(false);
+            h22.setSelected(false);
+            h23.setSelected(false);
+            h24.setSelected(false);
+            HelloApplication.escreverLog(Login.getLogin() + " excluiu remédio idoso");
+        }catch(CampoVazioExcecao CVE){
+            System.out.println("Necessário fornecer nome do idoso!");
+        }catch(Exception Ex){
+            System.out.println(Ex);
+        }
     }
 
     @FXML
