@@ -15,6 +15,7 @@ public class HelloApplication extends Application {
     private static Scene login;
     private static GravarTexto log;
 
+    @Override
     public void start(Stage primaryStage) throws IOException {
         stage = primaryStage;
         primaryStage.setTitle("Controle de Remédios");
