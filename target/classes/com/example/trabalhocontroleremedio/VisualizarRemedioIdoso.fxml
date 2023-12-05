@@ -15,31 +15,40 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Nome" />
+            <Label styleClass="label-modern" stylesheets="@../../../estilos/LabelTextField.css" text="Nome" />
             <HBox prefHeight="43.0" prefWidth="500.0">
                <children>
                   <TextField prefHeight="35.0" prefWidth="376.0" promptText="Informe o nome do idoso" styleClass="text-field-modern" stylesheets="@../../../estilos/LabelTextField.css" />
-                  <Button mnemonicParsing="false" styleClass="button-buscar" stylesheets="@../../../estilos/LabelTextField.css" text="Buscar" textAlignment="CENTER">
+                  <Button mnemonicParsing="false" prefWidth="276.0" styleClass="button-buscar" stylesheets="@../../../estilos/LabelTextField.css" text="Buscar" textAlignment="CENTER">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
-            <TableView prefHeight="200.0" prefWidth="200.0">
+            <TableView prefHeight="342.0" prefWidth="700.0" styleClass="grid-pane-modern" stylesheets="@../../../estilos/LabelTextField.css">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn prefWidth="100.0" text="HORÁRIOS" />
+                <TableColumn prefWidth="100.0" text="SEGUNDA" />
+                  <TableColumn prefWidth="100.0" text="TERÇA" />
+                  <TableColumn prefWidth="100.0" text="QUARTA" />
+                  <TableColumn prefWidth="100.0" text="QUINTA" />
+                  <TableColumn prefWidth="100.0" text="SEXTA" />
+                  <TableColumn prefWidth="100.0" text="SÁBADO" />
+                  <TableColumn prefWidth="100.0" text="DOMINGO" />
               </columns>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
             </TableView>
          </children>
       </VBox>
    </center>
    <left>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="44.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <Pane prefHeight="200.0" prefWidth="200.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="44.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER" />
    </right>
    <top>
       <Pane prefHeight="50.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
