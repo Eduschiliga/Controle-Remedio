@@ -44,6 +44,8 @@ public class LoginController {
                 HelloApplication.trocarTela("Principal");
             }else{
                 System.out.println("Usuário ou senha errados");
+                excecao.setText("Usuário ou senha incorreta!");
+                excecao.setVisible(true);
             }
         }catch(CampoVazioExcecao CVE){//CampoVazioExcecao CVE){
             excecao.setText("Campo Login ou Senha vazio!");

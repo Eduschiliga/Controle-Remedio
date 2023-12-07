@@ -52,6 +52,7 @@
                </font>
             </Label>
             <ChoiceBox fx:id="sexo" prefWidth="150.0" />
+            <Label fx:id="excecao" textFill="RED" visible="false" />
          </children>
       </VBox>
    </center>

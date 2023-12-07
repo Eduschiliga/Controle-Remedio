@@ -18,7 +18,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 
 public class CadastrarRemedioIdosoController {
 
@@ -128,7 +130,12 @@ public class CadastrarRemedioIdosoController {
     private CheckBox h9;
 
     @FXML
+    private Label excecao;
+
+    @FXML
     void buscar(ActionEvent event) {
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try{
             if(idoso.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -166,9 +173,14 @@ public class CadastrarRemedioIdosoController {
                 h22.setSelected(remedioIdosoM.getFkHorario().getH22());
                 h23.setSelected(remedioIdosoM.getFkHorario().getH23());
                 h24.setSelected(remedioIdosoM.getFkHorario().getH24());
+            }else{
+                excecao.setText("Idoso não encontrado!");
+                excecao.setVisible(true);
             }
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome!");
+            excecao.setText("Necessário fornecer um nome!");
+            excecao.setVisible(true);
         }catch(NullPointerException NPE){
             System.out.println("Sem ocorrência do Idoso solicitado!");
         }
@@ -176,6 +188,8 @@ public class CadastrarRemedioIdosoController {
 
     @FXML
     void cadastrar(ActionEvent event) {
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try{
             if(idoso.getText().equals("") || remedio.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -230,9 +244,14 @@ public class CadastrarRemedioIdosoController {
                 remedioIdosoM = new RemedioIdoso(totalRemedioIdoso+1,Float.parseFloat(dosagem.getText()),Integer.parseInt(dias.getText()),idosoM,remedioM,horarioM);
                 jpaRemedioIdoso.cadastrar(remedioIdosoM);
             }
+            excecao.setText("Vinculo cadastrado com sucesso!");
+            excecao.textFillProperty().set(Color.GREEN);
+            excecao.setVisible(true);
             HelloApplication.escreverLog(Login.getLogin() + " cadastrou remédio idoso");
         }catch(CampoVazioExcecao CVE){
             System.out.println("Campo Idoso ou Remédio vazios");
+            excecao.setText("Campo Idoso ou Remédio vazio!");
+            excecao.setVisible(true);
         }catch(Exception Ex){
             System.out.println(Ex);
         }
@@ -240,6 +259,8 @@ public class CadastrarRemedioIdosoController {
 
     @FXML
     void editar(ActionEvent event) {
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try{
             if(idoso.getText().equals("") || remedio.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -287,10 +308,19 @@ public class CadastrarRemedioIdosoController {
 
                 jpaRemedioIdoso.editar(remedioIdosoM);
 
+                excecao.setText("Vinculo alterado com sucesso!");
+                excecao.textFillProperty().set(Color.GREEN);
+                excecao.setVisible(true);
+
                 HelloApplication.escreverLog(Login.getLogin() + " editou remédio idoso");
+            }else{
+                excecao.setText("Idoso não encontrado!");
+                excecao.setVisible(true);
             }
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer nome de Idoso e Remédio!");
+            excecao.setText("Necessário fornecer nome de Idoso e Remédio!");
+            excecao.setVisible(true);
         }catch(Exception Ex){
             System.out.println(Ex);
         }  
@@ -298,6 +328,8 @@ public class CadastrarRemedioIdosoController {
 
     @FXML
     void excluir(ActionEvent event) {
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try{
             if(idoso.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -333,9 +365,14 @@ public class CadastrarRemedioIdosoController {
             h22.setSelected(false);
             h23.setSelected(false);
             h24.setSelected(false);
+            excecao.setText("Vinculo excluido com sucesso!");
+            excecao.textFillProperty().set(Color.GREEN);
+            excecao.setVisible(true);
             HelloApplication.escreverLog(Login.getLogin() + " excluiu remédio idoso");
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer nome do idoso!");
+            excecao.setText("Necessário fornecer um nome!");
+            excecao.setVisible(true);
         }catch(Exception Ex){
             System.out.println(Ex);
         }

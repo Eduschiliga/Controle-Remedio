@@ -149,6 +149,7 @@
                   <Insets />
                </VBox.margin>
             </GridPane>
+            <Label fx:id="excecao" textFill="RED" visible="false" />
          </children>
       </VBox>
    </center>

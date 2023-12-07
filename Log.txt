@@ -177,3 +177,42 @@ Login: admin
 Login: admin
 Login: admin
 Login: admin
+Login: admin
+Login: admin
+admin cadastrou idoso Mateus da Silva Sauro
+admin cadastrou remédio idoso
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+Login: admin
+admin cadastrou idoso Mario
+admin alterou idoso Mario
+admin excluiu idoso 
+admin cadastrou idoso Jubisclei
+admin excluiu idoso 
+Login: admin
+admin cadastrou awdas
+admin alterou awdas
+admin excluiu 
+Login: admin
+Login: admin
+admin cadastrou usuário com matrícula: 25
+admin alterou usuário com matrícula: 25
+admin excluiu usuário com matrícula: 
+Login: admin
+admin cadastrou idoso Potato
+admin cadastrou remédio idoso
+admin editou remédio idoso
+admin excluiu remédio idoso
+Login: admin
+admin cadastrou remédio idoso
+admin editou remédio idoso
+admin excluiu remédio idoso
+admin excluiu idoso 
+Login: admin

@@ -57,7 +57,6 @@
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#vincular" text="vincular" />
                </items></Menu>
-          <Menu mnemonicParsing="false" text="Ajuda" />
             <Menu mnemonicParsing="false" text="Sair">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#deslogar" text="Deslogar" />

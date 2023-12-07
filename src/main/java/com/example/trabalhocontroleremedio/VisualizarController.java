@@ -8,12 +8,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 import com.example.trabalhocontroleremedio.banco.RemedioIdosoDAO;
+import com.example.trabalhocontroleremedio.excecao.CampoVazioExcecao;
 import com.example.trabalhocontroleremedio.modelo.Horario;
 import com.example.trabalhocontroleremedio.modelo.HorarioRemedio;
 import com.example.trabalhocontroleremedio.modelo.Remedio;
@@ -66,17 +70,41 @@ public class VisualizarController {
     private TextField nome;
 
     @FXML
+    private Label excecao;
+
+    @FXML
     void buscar(ActionEvent event) {
-        remedioIdoso = jpa.buscarRemedioIdosoNome(nome.getText());
-        verficarHorarios();
-        verifcarDias();
-        lista = FXCollections.observableArrayList();
-        for(int i = 0;i<24;i++){
-            if(listaHorario[i] != ""){
-                lista.add(new HorarioRemedio(listaHorario[i],listaDias[0],listaDias[1],listaDias[2],listaDias[3],listaDias[4],listaDias[5],listaDias[6]));
+        excecao.setVisible(false);
+        try{
+            if(nome.getText().equals("")){
+                throw new CampoVazioExcecao();
             }
+            remedioIdoso = jpa.buscarRemedioIdosoNome(nome.getText());
+            verficarHorarios();
+            verifcarDias();
+            lista = FXCollections.observableArrayList();
+            for(int i = 0;i<24;i++){
+                if(listaHorario[i] != ""){
+                    lista.add(new HorarioRemedio(listaHorario[i],listaDias[0],listaDias[1],listaDias[2],listaDias[3],listaDias[4],listaDias[5],listaDias[6]));
+                }
+            }
+            montarTabela();
+        }catch(CampoVazioExcecao CVE){
+            System.out.println(CVE);
+            excecao.setText("Necessário fornecer um nome!");
+            excecao.setVisible(true);
+        }catch(Exception e){
+            System.out.println("Idoso não encontrado");
+            excecao.setText("Nome não encontrado!");
+            excecao.setVisible(true);
         }
-        montarTabela();
+    }
+
+    @FXML
+    void buscarTeclado(KeyEvent event) {
+        if(event.getCode() == KeyCode.ENTER){
+            buscar(null);
+        }
     }
 
     private void verficarHorarios(){

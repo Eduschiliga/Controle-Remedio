@@ -4,8 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.collections.ObservableList;
 
 import com.example.trabalhocontroleremedio.banco.UsuarioDAO;
@@ -53,9 +55,17 @@ public class CadastrarUsuarioController {
     private Button btnExcluir;
 
     @FXML
+    private Label excecao;
+
+    @FXML
     void cadastrar(ActionEvent event) { // Cadastra usuário no banco
         int matricula;
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try {
+            if(this.matricula.getText().equals("")){
+                throw new CampoVazioExcecao();
+            }
             usuario = new Usuario();
             matricula = Integer.parseInt(this.matricula.getText());
             usuario.setLogin(this.login.getText());
@@ -65,9 +75,18 @@ public class CadastrarUsuarioController {
             usuario.setTelefone(this.telefone.getText());
             usuario.setTipo(this.tipo.getValue());
             jpa.cadastrar(usuario);
+            excecao.setText("Usuário cadastrado com sucesso!");
+            excecao.textFillProperty().set(Color.GREEN);
+            excecao.setVisible(true);
             HelloApplication.escreverLog(Login.getLogin() + " cadastrou usuário com matrícula: " + this.matricula.getText());
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");
+            excecao.setText("A mátricula deve conter apenas números!");
+            excecao.setVisible(true);
+        }catch(CampoVazioExcecao CVE){
+            System.out.println("Necessário fornecer uma mátricula");
+            excecao.setText("Necessário fornecer uma mátricula!");
+            excecao.setVisible(true);
         }catch (Exception ex){
             System.out.println(ex);
         }
@@ -75,6 +94,8 @@ public class CadastrarUsuarioController {
 
     @FXML
     void buscar(ActionEvent event) { // Busca usuário no banco
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try{
             if(matricula.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -90,8 +111,12 @@ public class CadastrarUsuarioController {
             }
         }catch(CampoVazioExcecao CVE){
             System.out.println("Campo matrícula vazio!");
+            excecao.setText("Necessário fornecer uma mátricula!");
+            excecao.setVisible(true);
         }catch(NumberFormatException NFE){
             System.out.println("Necessário utilizar apenas números na matricula!");
+            excecao.setText("A mátricula deve conter apenas números!");
+            excecao.setVisible(true);
         }catch(NullPointerException NPE){
             usuario = new Usuario();
         }
@@ -99,6 +124,8 @@ public class CadastrarUsuarioController {
 
     @FXML
     void alterar(ActionEvent event) { // Altera usuário no banco
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try {
             if(matricula.getText().equals("") || senha.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -114,11 +141,18 @@ public class CadastrarUsuarioController {
                 usuario.setTipo(tipo.getValue());
                 jpa.editar(usuario);
             }
+            excecao.setText("Usuário alterado com sucesso!");
+            excecao.textFillProperty().set(Color.GREEN);
+            excecao.setVisible(true);
             HelloApplication.escreverLog(Login.getLogin() + " alterou usuário com matrícula: " + this.matricula.getText());
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");
+            excecao.setText("A mátricula deve conter apenas números!");
+            excecao.setVisible(true);
         } catch(CampoVazioExcecao CVE){
             System.out.println("Campo matrícula ou senha vazio!");
+            excecao.setText("Necessário fornecer uma mátricula!");
+            excecao.setVisible(true);
         } catch(Exception ex){
             System.out.println(ex);
         }
@@ -126,6 +160,8 @@ public class CadastrarUsuarioController {
 
     @FXML
     void excluir(ActionEvent event) { // Exclui um usuário no banco
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try {
             if(matricula.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -138,11 +174,19 @@ public class CadastrarUsuarioController {
             this.nome.setText("");
             this.telefone.setText("");
             this.matricula.setText("");
+            this.senha.setText("");
+            excecao.setText("Usuário excluido com sucesso!");
+            excecao.textFillProperty().set(Color.GREEN);
+            excecao.setVisible(true);
             HelloApplication.escreverLog(Login.getLogin() + " excluiu usuário com matrícula: " + this.matricula.getText());
         } catch (NumberFormatException NFE) {
             System.out.println("A mátricula deve conter apenas números");
+            excecao.setText("A mátricula deve conter apenas números!");
+            excecao.setVisible(true);
         } catch(CampoVazioExcecao CVE){
             System.out.println("A matricula está vazia!");
+            excecao.setText("Necessário fornecer uma mátricula!");
+            excecao.setVisible(true);
         } catch(Exception ex){
             System.out.println(ex);
         }

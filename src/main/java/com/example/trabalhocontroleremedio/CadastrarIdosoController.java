@@ -17,7 +17,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 
 public class CadastrarIdosoController {
 
@@ -53,7 +55,12 @@ public class CadastrarIdosoController {
     private ChoiceBox<String> sexo;
 
     @FXML
+    private Label excecao;
+
+    @FXML
     void alterar(ActionEvent event) {
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try{
             if(nome.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -62,16 +69,25 @@ public class CadastrarIdosoController {
             idoso.setNascimento(nascimento.getValue().toString());
             idoso.setSexo(sexo.getValue());
             jpa.editar(idoso);
+            excecao.setText("Idoso alterado com sucesso!");
+            excecao.textFillProperty().set(Color.GREEN);
+            excecao.setVisible(true);
             HelloApplication.escreverLog(Login.getLogin() + " alterou idoso " + this.nome.getText());
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome!");
+            excecao.setText("Necessário fornecer um nome!");
+            excecao.setVisible(true);
         }catch(Exception ex){
             System.out.println(ex);
+            excecao.setText("Impossível alterar idoso!");
+            excecao.setVisible(true);
         }
     }
 
     @FXML
     void buscar(ActionEvent event) {
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try{
             if(nome.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -82,9 +98,14 @@ public class CadastrarIdosoController {
             if(idoso != null){
                 sexo.setValue(idoso.getSexo());
                 nascimento.setValue(LocalDate.parse(idoso.getNascimento()));
+            }else{
+                excecao.setText("Idoso não encontrado!");;
+                excecao.setVisible(true);
             }
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome");
+            excecao.setText("Necessário fornecer um nome!");
+            excecao.setVisible(true);
         }catch(NullPointerException NPE){
             System.out.println(NPE);
         }
@@ -92,6 +113,8 @@ public class CadastrarIdosoController {
 
     @FXML
     void cadastrar(ActionEvent event) {
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try{
             if(nome.getText().equals("") || nascimento.getValue().equals(null)){
                 throw new CampoVazioExcecao();
@@ -108,16 +131,25 @@ public class CadastrarIdosoController {
             idoso.setNascimento(nascimento.getValue().toString());
             idoso.setSexo(sexo.getValue());
             jpa.cadastrar(idoso);
+            excecao.textFillProperty().set(Color.GREEN);
+            excecao.setText("Idoso criado com sucesso!");
+            excecao.setVisible(true);
             HelloApplication.escreverLog(Login.getLogin() + " cadastrou idoso " + this.nome.getText());
         }catch(CampoVazioExcecao CVE){
             System.out.println("Campos vazios!");
+            excecao.setText("Campos vazios encontrados!");
+            excecao.setVisible(true);
         }catch(Exception ex){
             System.out.println(ex);
+            excecao.setText("Impossível cadastrar idoso!");
+            excecao.setVisible(true);
         }
     }
 
     @FXML
     void excluir(ActionEvent event) {
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
         try{
             if(nome.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -129,11 +161,18 @@ public class CadastrarIdosoController {
             nome.setText("");
             sexo.setValue("Masculino");
             nascimento.setValue(null);
+            excecao.setText("Idoso excluido com sucesso!");
+            excecao.textFillProperty().set(Color.GREEN);
+            excecao.setVisible(true);
             HelloApplication.escreverLog(Login.getLogin() + " excluiu idoso " + this.nome.getText());
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário nome para exclusão!");
+            excecao.setText("Necessário fornecer um nome!");
+            excecao.setVisible(true);
         }catch(Exception ex){
             System.out.println(ex);
+            excecao.setText("Impossoível realizar a exclusão!");
+            excecao.setVisible(true);
         }
     }
 
