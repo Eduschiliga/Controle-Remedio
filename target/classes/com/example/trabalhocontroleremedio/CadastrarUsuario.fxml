@@ -69,7 +69,21 @@
                     </VBox.margin>
                 </Label>
                 <TextField fx:id="matricula" prefHeight="46.0" prefWidth="600.0" promptText="Matrícula do usuário" styleClass="text-field-modern" />
-            <Label fx:id="excecao" textFill="RED" />
+            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="780.0">
+               <children>
+                  <Label fx:id="excecao" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </opaqueInsets>
+            </HBox>
             </children>
         </VBox>
     </center>
@@ -80,7 +94,7 @@
         <VBox prefHeight="200.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
     </right>
     <bottom>
-        <HBox alignment="CENTER" prefHeight="119.0" prefWidth="800.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
+        <HBox alignment="CENTER" prefHeight="92.0" prefWidth="900.0" stylesheets="@../../../estilos/LabelTextField.css" BorderPane.alignment="CENTER">
             <children>
                 <Button fx:id="btnCadastrar" alignment="CENTER" mnemonicParsing="false" onAction="#cadastrar" prefHeight="50.0" prefWidth="150.0" styleClass="button-cadastrar" text="CADASTRAR">
                     <font>
