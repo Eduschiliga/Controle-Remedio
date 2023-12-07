@@ -11,31 +11,31 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trabalhocontroleremedio.VisualizarController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <Label styleClass="label-modern" stylesheets="@../../../estilos/LabelTextField.css" text="Nome" />
             <HBox prefHeight="43.0" prefWidth="500.0">
                <children>
-                  <TextField prefHeight="35.0" prefWidth="376.0" promptText="Informe o nome do idoso" styleClass="text-field-modern" stylesheets="@../../../estilos/LabelTextField.css" />
-                  <Button mnemonicParsing="false" prefWidth="276.0" styleClass="button-buscar" stylesheets="@../../../estilos/LabelTextField.css" text="Buscar" textAlignment="CENTER">
+                  <TextField fx:id="nome" prefHeight="35.0" prefWidth="376.0" promptText="Informe o nome do idoso" styleClass="text-field-modern" stylesheets="@../../../estilos/LabelTextField.css" />
+                  <Button mnemonicParsing="false" onAction="#buscar" prefWidth="276.0" styleClass="button-buscar" stylesheets="@../../../estilos/LabelTextField.css" text="Buscar" textAlignment="CENTER">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
-            <TableView prefHeight="342.0" prefWidth="700.0" styleClass="grid-pane-modern" stylesheets="@../../../estilos/LabelTextField.css">
+            <TableView fx:id="tabela" prefHeight="342.0" prefWidth="700.0" styleClass="grid-pane-modern" stylesheets="@../../../estilos/LabelTextField.css">
               <columns>
-                <TableColumn prefWidth="100.0" text="HORÁRIOS" />
-                <TableColumn prefWidth="100.0" text="SEGUNDA" />
-                  <TableColumn prefWidth="100.0" text="TERÇA" />
-                  <TableColumn prefWidth="100.0" text="QUARTA" />
-                  <TableColumn prefWidth="100.0" text="QUINTA" />
-                  <TableColumn prefWidth="100.0" text="SEXTA" />
-                  <TableColumn prefWidth="100.0" text="SÁBADO" />
-                  <TableColumn prefWidth="100.0" text="DOMINGO" />
+                <TableColumn fx:id="horario" prefWidth="100.0" text="HORÁRIOS" />
+                <TableColumn fx:id="segunda" prefWidth="100.0" text="SEGUNDA" />
+                  <TableColumn fx:id="terca" prefWidth="100.0" text="TERÇA" />
+                  <TableColumn fx:id="quarta" prefWidth="100.0" text="QUARTA" />
+                  <TableColumn fx:id="quinta" prefWidth="100.0" text="QUINTA" />
+                  <TableColumn fx:id="sexta" prefWidth="100.0" text="SEXTA" />
+                  <TableColumn fx:id="sabado" prefWidth="100.0" text="SÁBADO" />
+                  <TableColumn fx:id="domingo" prefWidth="100.0" text="DOMINGO" />
               </columns>
                <VBox.margin>
                   <Insets top="20.0" />

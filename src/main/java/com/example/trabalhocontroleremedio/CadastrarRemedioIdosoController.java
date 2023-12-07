@@ -183,17 +183,11 @@ public class CadastrarRemedioIdosoController {
             idosoM = new Idoso();
             remedioM = new Remedio();
             horarioM = new Horario();
-            remedioIdosoM = new RemedioIdoso();
             idosoM.setNome(idoso.getText());
             idosoM = jpaIdoso.buscarNome(idosoM);
             remedioM.setNome(remedio.getText());
             remedioM = jpaRemedio.buscarNome(remedioM);
             if(idosoM != null && remedioM != null){
-                remedioIdosoM.setDosagem(Float.parseFloat(dosagem.getText()));
-                remedioIdosoM.setFkIdoso(idosoM);
-                remedioIdosoM.setFkRemedio(remedioM);
-                remedioIdosoM.setQuantidadeDias(Integer.parseInt(dias.getText()));
-
                 int totalHorario = 0;
                 int totalRemedioIdoso = 0;
                 for (Horario horario : jpaHorario.buscarTodos()) {
@@ -233,8 +227,7 @@ public class CadastrarRemedioIdosoController {
                 horarioM.setH24(h24.isSelected());
                 jpaHorario.cadastrar(horarioM);
 
-                remedioIdosoM.setFkHorario(horarioM);
-                remedioIdosoM.setIdRemedioIdoso(totalRemedioIdoso+1);
+                remedioIdosoM = new RemedioIdoso(totalRemedioIdoso+1,Float.parseFloat(dosagem.getText()),Integer.parseInt(dias.getText()),idosoM,remedioM,horarioM);
                 jpaRemedioIdoso.cadastrar(remedioIdosoM);
             }
             HelloApplication.escreverLog(Login.getLogin() + " cadastrou remédio idoso");

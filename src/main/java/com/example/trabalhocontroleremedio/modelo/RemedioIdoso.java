@@ -55,6 +55,15 @@ public class RemedioIdoso implements Serializable {
         this.idRemedioIdoso = idRemedioIdoso;
     }
 
+    public RemedioIdoso(Integer idRemedioIdoso, Float dosagem, Integer quantidadeDias, Idoso fkIdoso, Remedio fkRemedio, Horario fkHorario){
+        this.idRemedioIdoso = idRemedioIdoso;
+        this.dosagem = dosagem;
+        this.quantidadeDias = quantidadeDias;
+        this.fkIdoso = fkIdoso;
+        this.fkRemedio = fkRemedio;
+        this.fkHorario = fkHorario;
+    }
+
     public Integer getIdRemedioIdoso() {
         return idRemedioIdoso;
     }

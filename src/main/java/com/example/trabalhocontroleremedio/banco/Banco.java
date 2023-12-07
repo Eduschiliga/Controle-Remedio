@@ -7,23 +7,27 @@ public class Banco {
         String url = "jdbc:postgresql://localhost:5432/";
         String user = "postgres";
         String senha = "84627913";
-        String database = "teste"; //Utilizado para testes
-        //String database = "trabalhoIdosoRemedio";
+        //String database = "teste"; //Utilizado para testes
+        String database = "trabalhoidosoremedio";
+
+        Connection con = null;
+        Statement stat = null;
         try{
-            Connection con = null;
-            Statement stat = null;
+            con = DriverManager.getConnection(url+database,user,senha);
+            stat = con.createStatement();
+        }catch(SQLException SQLe){
             try{
-                con = DriverManager.getConnection(url+database,user,senha);
-                stat = con.createStatement();
-            }catch(Exception Ex){
                 con = DriverManager.getConnection(url,user,senha);
                 stat = con.createStatement();
                 stat.executeUpdate("CREATE DATABASE " + database);
-                con.close();
                 con = DriverManager.getConnection(url+database,user,senha);
                 stat = con.createStatement();
+            }catch(SQLException SQLe2){
+                System.out.println(SQLe2);
             }
-            
+        }
+
+        try{ 
             // stat.executeUpdate("<SQL>"); // Funcionamento do comando
             /* Criação do banco */
             stat.executeUpdate("CREATE TABLE Idoso (idIdoso integer NOT NULL, nome character varying(255), nascimento character varying(255), " +
@@ -55,8 +59,9 @@ public class Banco {
             //ResultSet result = stat.executeQuery("SELECT * FROM Idoso");
             //System.out.println(result.getInt("idIdoso") + " | " + result.getString("nascimento"));
 
-        }catch(SQLException SQLe){
-            System.out.println(SQLe);
+            System.out.println("Banco criado com sucesso!");
+        }catch(SQLException SQLe3){
+            System.out.println(SQLe3);
         }
     }
 }
