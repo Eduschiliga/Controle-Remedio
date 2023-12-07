@@ -22,6 +22,38 @@ public class HorarioRemedio {
         this.domingo = domingo;
     }
 
+    public String getHorario() {
+        return horario;
+    }
+
+    public String getSegunda() {
+        return segunda;
+    }
+
+    public String getTerca() {
+        return terca;
+    }
+
+    public String getQuarta() {
+        return quarta;
+    }
+
+    public String getQuinta() {
+        return quinta;
+    }
+
+    public String getSexta() {
+        return sexta;
+    }
+
+    public String getSabado() {
+        return sabado;
+    }
+
+    public String getDomingo() {
+        return domingo;
+    }
+
     @Override
     public String toString(){
         return horario + " | " + segunda + " | " + terca + " | " + quarta + " | " + quinta + " | " + sexta + " | " + sabado + " | " + domingo;

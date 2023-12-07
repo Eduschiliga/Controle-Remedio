@@ -119,7 +119,15 @@ public class VisualizarController {
     }
 
     private void montarTabela(){
-
+        tabela.setItems(lista);
+        horario.setCellValueFactory(new PropertyValueFactory<>("horario"));
+        segunda.setCellValueFactory(new PropertyValueFactory<>("segunda"));
+        terca.setCellValueFactory(new PropertyValueFactory<>("terca"));
+        quarta.setCellValueFactory(new PropertyValueFactory<>("quarta"));
+        quinta.setCellValueFactory(new PropertyValueFactory<>("quinta"));
+        sexta.setCellValueFactory(new PropertyValueFactory<>("sexta"));
+        sabado.setCellValueFactory(new PropertyValueFactory<>("sabado"));
+        domingo.setCellValueFactory(new PropertyValueFactory<>("domingo"));
     }
 
     @FXML
