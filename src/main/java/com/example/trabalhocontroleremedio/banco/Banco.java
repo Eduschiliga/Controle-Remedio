@@ -2,6 +2,7 @@ package com.example.trabalhocontroleremedio.banco;
 
 import java.sql.*;
 
+//Criação de banco e tabelas
 public class Banco {
     public static void main(String[] args) {
         String url = "jdbc:postgresql://localhost:5432/";

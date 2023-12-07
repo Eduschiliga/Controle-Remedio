@@ -11,6 +11,7 @@ import javax.persistence.criteria.CriteriaQuery;
 
 import com.example.trabalhocontroleremedio.modelo.Horario;
 
+//Manutenção de dados no banco
 public class HorarioJPAController implements Serializable{
     
     private EntityManagerFactory emf = null;

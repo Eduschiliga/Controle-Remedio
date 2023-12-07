@@ -28,6 +28,7 @@ public class PrincipalController {
     @FXML
     private BorderPane principal;
 
+    //Eventos de botão
     @FXML
     void visualizar(ActionEvent event) {
         setTela("Visualizar");
@@ -58,6 +59,7 @@ public class PrincipalController {
         HelloApplication.trocarTela("Login");
     }
 
+    //Eventos de teclado
     @FXML
     void telas(KeyEvent event) {
         if(event.getCode() == KeyCode.F1){
@@ -104,7 +106,7 @@ public class PrincipalController {
         }
     }
 
-
+    //Adicionado evento de mouse, clique direito no menu lista as telas
     @FXML
     void initialize() {
         principal.setCenter(null);

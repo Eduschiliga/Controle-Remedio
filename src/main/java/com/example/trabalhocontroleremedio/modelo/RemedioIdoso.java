@@ -55,6 +55,7 @@ public class RemedioIdoso implements Serializable {
         this.idRemedioIdoso = idRemedioIdoso;
     }
 
+    //Sobrecarga de método
     public RemedioIdoso(Integer idRemedioIdoso, Float dosagem, Integer quantidadeDias, Idoso fkIdoso, Remedio fkRemedio, Horario fkHorario){
         this.idRemedioIdoso = idRemedioIdoso;
         this.dosagem = dosagem;

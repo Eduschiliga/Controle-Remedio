@@ -3,6 +3,7 @@ package com.example.trabalhocontroleremedio.banco;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
 
+//Interface
 public interface InterfaceDAO<J,E> {
 
     public EntityManagerFactory getEntityManagerFactory();

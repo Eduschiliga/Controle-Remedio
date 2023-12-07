@@ -26,6 +26,7 @@ public class LoginController {
     @FXML
     private Label excecao;
 
+    // Evento de botão
     @FXML
     void entrar(ActionEvent event) { // Validação de login
         boolean validacao;
@@ -54,6 +55,7 @@ public class LoginController {
         }
     }
 
+    // Evento de teclado
     @FXML
     void teclas(KeyEvent event) { // Evento para leitura de tecla
         if(event.getCode() == KeyCode.ENTER){
