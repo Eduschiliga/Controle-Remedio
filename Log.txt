@@ -216,3 +216,6 @@ admin editou remédio idoso
 admin excluiu remédio idoso
 admin excluiu idoso 
 Login: admin
+Login: admin
+admin cadastrou idoso Pancreatite
+admin excluiu idoso 

@@ -42,7 +42,7 @@ public class HelloApplication extends Application {
         }
     }
 
-    public static void escreverLog(String texto){
+    public static void escreverLog(String texto){ // Realiza a escrita no log
         log.inserirTexto(texto);
     }
 

@@ -60,8 +60,7 @@ public class CadastrarRemedioController {
 
     @FXML
     void alterar(ActionEvent event) { // Faz a alteração dos dados do remédio no banco
-        excecao.setVisible(false);
-        excecao.textFillProperty().set(Color.RED);
+        desativarExcecao();
         try {
             if(nome.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -71,18 +70,11 @@ public class CadastrarRemedioController {
             remedio.setNome(nome.getText());
             remedio.setNomeGenerico(nomeGenerico.getText());
             jpa.editar(remedio);
-            excecao.setText("Remédio alterado com sucesso!");
-            excecao.textFillProperty().set(Color.GREEN);
-            excecao.setVisible(true);
+            novaExcecao("Remédio alterado com sucesso!", Color.GREEN);
             HelloApplication.escreverLog(Login.getLogin() + " alterou " + this.nome.getText());
-        } catch (NumberFormatException NFE) {
-            System.out.println("A mátricula deve conter apenas números");
-            excecao.setText("Necessário ter apenas números na mátricula!");
-            excecao.setVisible(true);
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome!");
-            excecao.setText("Necessário fornecer um nome!");
-            excecao.setVisible(true);
+            novaExcecao("Necessário fornecer um nome!", Color.RED);
         }catch(Exception Ex){
             System.out.println(Ex);
         }
@@ -90,8 +82,7 @@ public class CadastrarRemedioController {
 
     @FXML
     void buscar(ActionEvent event) { // Busca um remédio no banco
-        excecao.setVisible(false);
-        excecao.textFillProperty().set(Color.RED);
+        desativarExcecao();
         try{
             if(nome.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -104,13 +95,11 @@ public class CadastrarRemedioController {
                 categoria.setText(remedio.getCategoria());
                 formaDosagem.setValue(remedio.getFormaDosagem());
             }else{
-                excecao.setText("Remédio não encontrado!");
-                excecao.setVisible(true);
+                novaExcecao("Remédio não encontrado!", Color.RED);
             }
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome!");
-            excecao.setText("Necessário fornecer um nome!");
-            excecao.setVisible(true);
+            novaExcecao("Necessário fornecer um nome!", Color.RED);
         }catch(NullPointerException NPE){
             System.out.println(NPE);
         }
@@ -118,8 +107,7 @@ public class CadastrarRemedioController {
 
     @FXML
     void cadastrar(ActionEvent event) { // Cadastra o remédio no banco
-        excecao.setVisible(false);
-        excecao.textFillProperty().set(Color.RED);
+        desativarExcecao();
         try {
             if(nome.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -137,14 +125,11 @@ public class CadastrarRemedioController {
             remedio.setNomeGenerico(nomeGenerico.getText());
             remedio.setFormaDosagem(formaDosagem.getValue());
             jpa.cadastrar(remedio);
-            excecao.setText("Remédio cadastrado com sucesso!");
-            excecao.textFillProperty().set(Color.GREEN);
-            excecao.setVisible(true);
+            novaExcecao("Remédio cadastrado com sucesso!", Color.GREEN);
             HelloApplication.escreverLog(Login.getLogin() + " cadastrou " + this.nome.getText());
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome para o remédio");
-            excecao.setText("Necessário fornecer um nome!");
-            excecao.setVisible(true);
+            novaExcecao("Necessário fornecer um nome!", Color.RED);
         }catch(Exception Ex){
             System.out.println(Ex);
         }
@@ -152,8 +137,7 @@ public class CadastrarRemedioController {
 
     @FXML
     void excluir(ActionEvent event) { // Exclui um remédio do banco
-        excecao.setVisible(false);
-        excecao.textFillProperty().set(Color.RED);
+        desativarExcecao();
         try{
             if(nome.getText().equals("")){
                 throw new CampoVazioExcecao();
@@ -165,17 +149,25 @@ public class CadastrarRemedioController {
             this.nome.setText("");
             this.nomeGenerico.setText("");
             this.categoria.setText("");
-            excecao.setText("Remédio excluido com sucesso!");
-            excecao.textFillProperty().set(Color.GREEN);
-            excecao.setVisible(true);
+            novaExcecao("Remédio excluido com sucesso!", Color.GREEN);
             HelloApplication.escreverLog(Login.getLogin() + " excluiu " + this.nome.getText());
         }catch(CampoVazioExcecao CVE){
             System.out.println("Necessário fornecer um nome!");
-            excecao.setText("Necessário fornecer um nome!");
-            excecao.setVisible(true);
+            novaExcecao("Necessário fornecer um nome!", Color.RED);
         }catch(Exception Ex){
             System.out.println(Ex);
         }
+    }
+
+    private void desativarExcecao(){
+        excecao.setVisible(false);
+        excecao.textFillProperty().set(Color.RED);
+    }
+
+    private void novaExcecao(String text, Color color){
+        excecao.setText(text);
+        excecao.textFillProperty().set(color);
+        excecao.setVisible(true);
     }
 
     @FXML
